@@ -211,7 +211,7 @@ nav .logo {
 /* GIF Styling */
 .button-gif {
     position: absolute; /* Position the GIF relative to the container */
-    top: -50px; /* Adjust as needed to place it above the button */
+    top: -100px; /* Adjust as needed to place it above the button */
     width: 150px; /* Adjust size of the GIF */
     height: auto; /* Maintain aspect ratio */
     pointer-events: none; /* Prevent the GIF from interfering with button clicks */
