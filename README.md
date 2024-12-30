@@ -1,4 +1,4 @@
 This repository is used to render my "Save the Date" sites so they can be used by families or others.
 
-Commencement Save the Date Site is [here](https://github.com/Olefincode/savethedate_site/main/Websites/home_page.html).
+Commencement Save the Date Site is [here](https://html-preview.github.io/?url=https://github.com/Olefincode/savethedate_site/main/Websites/home_page.html).
 
