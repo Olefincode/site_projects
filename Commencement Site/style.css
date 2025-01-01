@@ -87,6 +87,7 @@ nav .logo {
 
     /* Navigation Container */
     .nav-items {
+        font-size: .25rem;
         grid-template-columns: repeat(1, 1fr); /* Two columns for mobile */
         row-gap: 5px; /* Reduce row gap */
         column-gap: 5px; /* Reduce column gap */
