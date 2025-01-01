@@ -71,7 +71,7 @@ nav .logo {
     padding: 10px; /* Padding inside the nav container */
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
     /* Navigation Links on Mobile */
     .nav-items a {
         font-size: 0.5rem; /* Halve the font size */
