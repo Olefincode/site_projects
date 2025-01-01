@@ -82,14 +82,14 @@ nav .logo {
     /* Navigation Logo on Mobile */
     nav .logo {
         font-size: 0.75rem; /* Halve the logo font size */
-        padding: 5px; /* Reduce padding around the logo */
+        padding: 2.5px; /* Reduce padding around the logo */
     }
 
     /* Navigation Container */
     .nav-items {
-        grid-template-columns: repeat(2, 1fr); /* Two columns for mobile */
-        row-gap: 10px; /* Reduce row gap */
-        column-gap: 10px; /* Reduce column gap */
+        grid-template-columns: repeat(1, 1fr); /* Two columns for mobile */
+        row-gap: 5px; /* Reduce row gap */
+        column-gap: 5px; /* Reduce column gap */
     }
 }
 
