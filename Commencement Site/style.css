@@ -71,28 +71,37 @@ nav .logo {
     padding: 10px; /* Padding inside the nav container */
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
     /* Navigation Links on Mobile */
     .nav-items a {
         font-size: 0.5rem; /* Halve the font size */
-        width: 100px; /* Reduce the width for smaller screens */
-        height: 40px; /* Reduce the height for smaller screens */
+        padding: 8px 10px; /* Adjust padding for smaller buttons */
+        min-width: 80px; /* Reduce minimum width */
+        max-width: 140px; /* Reduce maximum width for smaller screens */
+        height: auto; /* Allow the height to adjust based on content */
+    }
+
+    /* Ensure Buttons Adjust for Text */
+    .nav-items a span {
+        display: inline-block; /* Allow dynamic height adjustment */
+        word-wrap: break-word; /* Break long words if necessary */
+        text-align: center; /* Center-align the text */
     }
 
     /* Navigation Logo on Mobile */
     nav .logo {
         font-size: 0.75rem; /* Halve the logo font size */
-        padding: 2.5px; /* Reduce padding around the logo */
+        padding: 5px; /* Reduce padding around the logo */
     }
 
     /* Navigation Container */
     .nav-items {
-        font-size: .25rem;
-        grid-template-columns: repeat(1, 1fr); /* Two columns for mobile */
-        row-gap: 5px; /* Reduce row gap */
-        column-gap: 5px; /* Reduce column gap */
+        grid-template-columns: repeat(2, 1fr); /* Two columns for mobile */
+        row-gap: 10px; /* Reduce row gap */
+        column-gap: 10px; /* Reduce column gap */
     }
 }
+
 
 
 /* Navigation Links Styling */
