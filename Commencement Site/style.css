@@ -78,15 +78,15 @@ nav .logo {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items horizontally */
         row-gap: 10px; /* Add space between items */
-        padding: 10px; /* Padding to maintain spacing */
+        padding: 20px; /* Padding to maintain spacing */
     }
 
     .nav-items a {
-        width: 25%; /* Make each nav item fit the mobile screen */
+        width: 100%; /* Make each nav item fit the mobile screen */
         text-align: center; /* Center-align text */
-        padding: 10px; /* Add padding for better touch interaction */
+        padding: 20px; /* Add padding for better touch interaction */
         background-color: #f8d7e8; /* Ensure consistent styling */
-        margin: 5px 0; /* Add spacing between items */
+        margin: 2.5px 0; /* Add spacing between items */
     }
 }
 
