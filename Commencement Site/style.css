@@ -73,8 +73,23 @@ nav .logo {
 
 @media screen and (max-width: 768px) {
     /* Navigation Links on Mobile */
+    nav {
+        background-color: rgb(240, 171, 215); /* Pink background for the nav box */
+        background-image: url('header.gif'); /* Path to your GIF */
+        background-size: cover; /* Cover the entire navigation area */
+        background-repeat: no-repeat; /* Prevent the GIF from repeating */
+        background-position: center; /* Center the GIF */
+        padding: 40px; /* Space inside the nav container */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        border-radius: 15px; /* Rounded corners */
+        margin: 20px auto; /* Center the nav with spacing */
+        max-width: 1000px; /* Limit the width of the nav */
+        display: flex; /* Use Flexbox for layout */
+        justify-content: space-between; /* Place logo on one side and items on the other */
+        align-items: center; /* Vertically center items */
+    }
     .nav-items a {
-        font-size: 0.5rem; /* Halve the font size */
+        font-size: 0.25rem; /* Halve the font size */
         padding: 8px 10px; /* Adjust padding for smaller buttons */
         min-width: 80px; /* Reduce minimum width */
         max-width: 120px; /* Reduce maximum width for smaller screens */
@@ -85,8 +100,8 @@ nav .logo {
     /* Navigation Container */
     .nav-items {
         grid-template-columns: repeat(2, 1fr); /* Two columns for mobile */
-        row-gap: 10px; /* Reduce row gap */
-        column-gap: 10px; /* Reduce column gap */
+        row-gap: 5px; /* Reduce row gap */
+        column-gap: 5px; /* Reduce column gap */
     }
 
     /* Ensure Buttons Adjust for Text */
