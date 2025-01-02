@@ -44,7 +44,7 @@ nav .logo {
     font-size: 1.2rem; /* Adjust logo size */
     font-weight: bold; /* Bold text */
     color: #4b2e2e; /* Dark brown text */
-    margin-right: 20px; /* Space between logo and navigation items */
+    margin-right: 10px; /* Space between logo and navigation items */
 }
 
 nav .logo {
@@ -101,7 +101,7 @@ nav .logo {
     .nav-items {
         grid-template-columns: repeat(2, 1fr); /* Two columns for mobile */
         row-gap: 5px; /* Reduce row gap */
-        column-gap: 5px; /* Reduce column gap */
+        column-gap: 10px; /* Reduce column gap */
     }
 
     /* Ensure Buttons Adjust for Text */
