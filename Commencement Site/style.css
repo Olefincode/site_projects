@@ -89,7 +89,7 @@ nav .logo {
         align-items: center; /* Vertically center items */
     }
     .nav-items a {
-        font-size: 0.25rem; /* Halve the font size */
+        font-size: 0.25rem !important; /* Halve the font size */
         padding: 8px 10px; /* Adjust padding for smaller buttons */
         min-width: 80px; /* Reduce minimum width */
         max-width: 120px; /* Reduce maximum width for smaller screens */
