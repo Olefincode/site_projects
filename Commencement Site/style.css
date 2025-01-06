@@ -66,9 +66,9 @@ nav .logo {
     grid-template-columns: repeat(3, auto); /* Three items per row, dynamically sized */
     column-gap: 20px; /* Space between columns */
     row-gap: 10px; /* Space between rows */
-    justify-content: center; /* Center the items */
-    text-align: center; /* Align text inside each item */
-    padding: 10px; /* Padding inside the nav container */
+    justify-content: center !important; /* Center the items */
+    text-align: center !important; /* Align text inside each item */
+    padding: 20 px; /* Padding inside the nav container */
 }
 
 @media screen and (max-width: 768px) {
