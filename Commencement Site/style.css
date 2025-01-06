@@ -114,7 +114,6 @@ nav .logo {
     /* Navigation Logo on Mobile */
     nav .logo {
         font-size: 0.75rem; /* Halve the logo font size */
-        padding: 5px; /* Reduce padding around the logo */
         margin-left: 0 px;
     }
 
