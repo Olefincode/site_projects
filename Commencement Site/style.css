@@ -114,8 +114,9 @@ nav .logo {
     /* Navigation Logo on Mobile */
     nav .logo {
         font-size: 0.75rem; /* Halve the logo font size */
-        padding: 5 px;
-        margin-left: 0 px !important;
+        padding: 5px;
+        margin-left: 0px !important;
+        margin-right: auto;
     }
 
 }
