@@ -115,8 +115,7 @@ nav .logo {
     nav .logo {
         font-size: 0.75rem; /* Halve the logo font size */
         padding: 5px;
-        margin-right: 0px !important;
-        margin-left: auto;
+        margin-left: 0px !important;
     }
 
 }
