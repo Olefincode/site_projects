@@ -1,0 +1,236 @@
+/* Global Styles */
+body {
+    background-color: rgb(252, 238, 247); /* Light pink */
+    margin: 0;
+    padding: 0;
+    font-family: 'amienne', Arial, sans-serif; /* Use Amienne font */
+    line-height: 1.6;
+}
+
+/* Global Link Styling */
+a {
+    color: #433030; /* Dark brown for general links */
+    text-decoration: underline; /* Always show underline */
+    font-weight: bold; /* Make links bold */
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+a:hover {
+    color: #ff85c2; /* Slightly lighter brown on hover */
+    text-decoration: underline; /* Keep underline on hover */
+}
+
+/* Navigation Container */
+
+nav {
+    background-color: rgb(240, 171, 215); /* Pink background for the nav box */
+    background-image: url('header.gif'); /* Path to your GIF */
+    background-size: cover; /* Cover the entire navigation area */
+    background-repeat: no-repeat; /* Prevent the GIF from repeating */
+    background-position: center; /* Center the GIF */
+    padding: 20px; /* Space inside the nav container */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 15px; /* Rounded corners */
+    margin: 20px auto; /* Center the nav with spacing */
+    max-width: 1000px; /* Limit the width of the nav */
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Place logo on one side and items on the other */
+    align-items: center; /* Vertically center items */
+}
+
+/* Logo */
+nav .logo {
+    font-family: 'Playfair Display', serif; /* Use Playfair Display font */
+    font-size: 1.2rem; /* Adjust logo size */
+    font-weight: bold; /* Bold text */
+    color: #4b2e2e; /* Dark brown text */
+    margin-right: 20px; /* Space between logo and navigation items */
+}
+
+nav .logo {
+    font-family: 'Playfair Display', serif; /* Font for the logo */
+    font-size: 1.2rem; /* Adjust logo size */
+    font-weight: bold; /* Bold text */
+    color: #4b2e2e; /* Dark brown text */
+    padding: 5px 10px; /* Add padding for spacing */
+    background-color: #f8d7e8; /* Light pink background */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    display: inline-block; /* Ensure proper layout within the nav */
+    margin-right: 20px;
+}
+
+
+/* Navigation Items for Desktop (Default) */
+.nav-items {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, auto); /* Three items per row, dynamically sized */
+    column-gap: 20px; /* Space between columns */
+    row-gap: 10px; /* Space between rows */
+    justify-content: center; /* Center the items */
+    text-align: center; /* Align text inside each item */
+    padding: 10px; /* Padding inside the nav container */
+}
+
+
+/* Navigation Links Styling */
+.nav-items a {
+    display: inline-block; /* Allow the box to adjust dynamically to the text */
+    text-decoration: none; /* Remove underline */
+    color: #4b2e2e; /* Dark brown text */
+    font-family: 'Playfair Display', serif; /* Example font */
+    font-size: 0.85rem; /* Adjust text size */
+    padding: 5px 10px; /* Add padding to create space around the text */
+    background-color: #f0dee7; /* Persistent light pink background */
+    border-radius: 5px; /* Add rounded corners for a polished look */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+
+/* Hover Effect for Links */
+.nav-items a:hover {
+    background-color: #f2c6dc; /* Slightly darker pink on hover */
+    color: #e4a2a2; /* Slightly lighter text color on hover */
+}
+
+/* Special Link Styling for Reser Stadium and June 14, 2025 */
+.column-center a.special-link {
+    font-family:'anisha', Arial, sans-serif;
+    color: #8a4c4c; /* Different color for special links */
+    font-weight: bold; /* Emphasize special links */
+    text-decoration: underline; /* Keep underline */
+}
+
+.column-center a.special-link:hover {
+    color: #ff85c2; /* Pink color on hover */
+}
+
+/* Hero Section Styles */
+.hero {
+    background: rgb(252, 238, 247); /* Match the body background */
+}
+
+.hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Remove Boxes from Column-Center */
+.column-center h1 {
+    margin-bottom: 1px; /* Reduce space below the <h1> */
+    text-align: center; /* Center the text */
+}
+
+.column-center h2 {
+    margin-top: 0px;
+    margin-bottom: 1px; /* Reduce space above the <h2> */
+    text-align: center; /* Center the text */
+}
+
+/* Specific styles for h1 */
+.column-center h1 {
+    font-family: 'anisha', Arial, sans-serif; /* Use Amienne font */
+    font-size: 2.5rem;
+    color: #433030; /* Darker text for contrast */
+}
+
+/* Specific styles for h2 */
+.column-center h2 {
+    font-family: 'anisha', Arial, sans-serif; /* Use Amienne font */
+    font-size: 1.5rem;
+    color: #433030; /* Slightly lighter text */
+}
+
+/* Outer Container for the Paragraph and GIF */
+.p-container {
+    position: relative; /* Create a relative positioning context */
+    margin: 0 auto 20px auto; /* Center horizontally and add spacing below */
+    display: flex; /* Optional for alignment; works well for centering */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center child elements horizontally */
+}
+
+.gif-container.upper-left {
+    top: 20px; /* Adjust vertical position */
+    left: 50px; /* Adjust horizontal position */
+}
+
+.p-gif-left {
+  width: 200 px;
+  height: auto;
+  pointer-events: none;  
+}
+
+/* Separate Container for the GIF */
+.gif-container {
+    position: absolute; /* Position the GIF relative to the container */
+    top: 25px; /* Move the GIF above the text box */
+    right: 75px; /* Adjust the horizontal positioning */
+    z-index: 2; /* Ensure the GIF appears on top of the text box */
+}
+
+/* GIF Styling */
+.p-gif {
+    width: 60px; /* Adjust size for the GIF */
+    height: auto; /* Maintain aspect ratio */
+    pointer-events: none; /* Prevent interaction */
+}
+
+/* Paragraph Box Styling */
+.text-box {
+    background-color: #c19696; /* Light brown background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Space inside the box */
+    margin-top: 60px; /* Ensure space between the GIF and text box */
+    max-width: 600px; /* Limit width */
+    text-align: center; /* Center text */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    color: #4b2e2e; /* Dark brown text */
+    font-family: 'amienne', serif; /* Use Playfair Display font */
+    font-size: 1.25rem; /* Adjust text size */
+    line-height: 1.6; /* Improve readability */
+    position: relative; /* Keep the box positioned properly */
+    z-index: 1; /* Ensure text box stays below the GIF */
+}
+
+
+/* Button Container */
+.button-container {
+    position: relative; /* Create a relative container for positioning */
+    display: flex; /* Use flexbox to center items */
+    flex-direction: column; /* Stack items vertically (GIF and button) */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 10vh; /* Full viewport height to center the button and GIF */
+}
+
+/* GIF Styling */
+.button-gif {
+    position: absolute; /* Position the GIF relative to the container */
+    top: -50px; /* Adjust as needed to place it above the button */
+    width: 150px; /* Adjust size of the GIF */
+    height: auto; /* Maintain aspect ratio */
+    pointer-events: none; /* Prevent the GIF from interfering with button clicks */
+}
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    background-color: #ffffff; /* White cloud-like background */
+    color: #4b2e2e; /* Dark brown text */
+    padding: 10px 20px; /* Adjust padding for button size */
+    font-size: 1.75rem; /* Adjust text size */
+    border: 2px solid #d4d4d4; /* Subtle gray border */
+    border-radius: 15px; /* Slightly rounded corners */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'anisha', Arial, sans-serif; /* Use Anisha font */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center the text inside the button */
+}
+
+.button:hover {
+    background-color: #f7c1dc; /* Slightly darker white on hover */
+    color: #ff85c2; /* Slightly darker pink text on hover */
+}
