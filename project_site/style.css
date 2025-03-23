@@ -203,14 +203,14 @@ body {
   
   /* 🔧 Header spacing fix */
   .hero-overlay-text h2 {
-    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-size: clamp(1.5rem, 4vw, 3rem);
     margin: 0 0 0.5rem 0; /* ⬅ no top margin, small bottom margin */
     line-height: 1.2;
   }
   
   /* 🔧 Strong text spacing */
   .hero-overlay-text strong {
-    font-size: clamp(.75rem, 2.5vw, 1.2rem);
+    font-size: clamp(.75rem, 2.5vw, 2rem);
     margin: 0 0 1rem 0;  /* ⬅ space below */
     display: block;
     line-height: 1.4;
@@ -220,7 +220,7 @@ body {
   .hero-button {
     background: none;
     border: none;
-    font-size: clamp(0.5rem, 2vw, 1.1rem);
+    font-size: clamp(0.5rem, 2vw, 2rem);
     color: #000;
     text-decoration: underline;
     text-align: left;
