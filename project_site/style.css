@@ -147,7 +147,7 @@ body {
     flex: 1;
     padding: 5px;
     font-weight: bold;
-    font-size: clamp(.05rem, 6vw, 4rem); /* Auto-scales the text */
+    font-size: clamp(.05rem, 2.5vw, 4rem); /* Auto-scales the text */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
