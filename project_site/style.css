@@ -192,6 +192,7 @@ body {
   
     background-color: rgba(255, 240, 245, 0.9);
     padding: 1rem 1.25rem;
+    padding-top: 0rem;
     border-radius: 12px;
     text-align: left;
   
@@ -202,8 +203,8 @@ body {
   }
   
   /* 🔧 Header spacing fix */
-  .hero-overlay-text h2 {
-    font-size: clamp(1.5rem, 4vw, 3rem);
+  .hero-overlay-text h1 {
+    font-size: clamp(1rem, 4vw, 3rem);
     margin: 0 0 0.5rem 0; /* ⬅ no top margin, small bottom margin */
     line-height: 1.2;
   }
@@ -246,7 +247,7 @@ body {
       width: auto;
       max-width: 90%;
       height: auto;
-      max-height: clamp(105px, 30vh, 150px);     /* ✅ added from second block */
+      max-height: clamp(200px, 30vh, 4000px);     /* ✅ added from second block */
       overflow-y: auto;       /* ✅ added from second block */
       box-sizing: border-box;
     }
