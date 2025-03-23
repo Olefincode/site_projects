@@ -155,82 +155,137 @@ body {
   }
   
   
-  /* Hero section */
-.hero-section {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  .hero-overlay-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    min-height: clamp(700px, 60vh, 800px); /* Grows on smaller screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
 
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  overflow: hidden;
-}
-
-/* Left Text Side */
-.hero-text {
-  flex: 0 1 40%;
-  color: #FFA733;
-  padding: 40px;
-}
-
-.hero-text h2 {
-  font-size: clamp(1.5rem, 4vw, 6rem);
-  margin-bottom: 20px;
-}
-
-.hero-text strong {
-  font-size: clamp(.9rem, 2vw, 3rem);
-  color: white;
-}
-
-/* Right Image Side */
-.hero-image {
-  flex: 0 1 60%;
-  height: 100%;
-}
-
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.hero-button {
-  text-align: left;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  font-size: clamp(.9rem, 2vw, 1.4rem);
-  font-weight: bold;
-  color: #FFA733;
-  text-decoration: underline;
-  cursor: pointer;
-  font-family: inherit;
-}
-
-.hero-button:hover {
-  color: #ffb855;
-}
- /* Initial state */
-.hero-text,
-.hero-image {
+  .hero-image-container {
+    position: relative;
+    width: 100%;
+    min-height: clamp(700px, 60vh, 1200px); /* Make sure it doesn't collapse */
+    overflow: hidden;
+  }
+  
+  .hero-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensures image fills container */
+    display: block;
+  }
+  
+  
+  .hero-overlay-text {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+  
+    background-color: rgba(255, 240, 245, 0.9);
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    text-align: left;
+  
+    display: inline-block;
+    max-width: 90vw;
+  
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 🔧 Header spacing fix */
+  .hero-overlay-text h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin: 0 0 0.5rem 0; /* ⬅ no top margin, small bottom margin */
+    line-height: 1.2;
+  }
+  
+  /* 🔧 Strong text spacing */
+  .hero-overlay-text strong {
+    font-size: clamp(.75rem, 2.5vw, 1.2rem);
+    margin: 0 0 1rem 0;  /* ⬅ space below */
+    display: block;
+    line-height: 1.4;
+  }
+  
+  /* 🔧 Button spacing */
+  .hero-button {
+    background: none;
+    border: none;
+    font-size: clamp(0.5rem, 2vw, 1.1rem);
+    color: #000;
+    text-decoration: underline;
+    text-align: left;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+  }
+  
+  @media (max-width: 500px) {
+    .hero-overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+  
+      padding: 0.75rem 1rem;
+      background-color: rgba(255, 240, 245, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  
+      display: inline-block;
+      text-align: left;
+  
+      width: auto;
+      max-width: 90%;
+      height: auto;
+      max-height: clamp(105px, 30vh, 150px);     /* ✅ added from second block */
+      overflow-y: auto;       /* ✅ added from second block */
+      box-sizing: border-box;
+    }
+  
+    .hero-overlay-text h2,
+    .hero-overlay-text strong,
+    .hero-button {
+      margin: 0;
+      line-height: 1.2;
+      font-size: clamp(0.9rem, 4vw, 1.1rem);
+    }
+  
+    .hero-button {
+      padding: 0.5rem 0;
+      display: inline-block;
+    }
+  }
+  
+    
+  
+  
+  
+  
+  
+  
+.hero-image{
   opacity: 0;
-  transform: translateX(0); /* Prevent jump */
+  transform: translateX(40px);
+  will-change: transform, opacity;
 }
-
-/* Animate text from the left */
-.hero-text.fade-in-left {
-  animation: slideFadeLeft 0.8s ease forwards;
-}
-
-/* Animate image from the right */
+/* 🔁 Slide image from right */
 .hero-image.fade-in-right {
   animation: slideFadeRight 0.8s ease forwards;
   animation-delay: .15s;
+}
+
+/* Optional: text slide-in too */
+.hero-text.fade-in-left {
+  animation: slideFadeLeft 0.8s ease forwards;
 }
 
 /* Keyframes */

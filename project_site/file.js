@@ -33,4 +33,24 @@ window.addEventListener('scroll', function() {
       nav.classList.remove('sticky');
     }
   });
-
+  document.addEventListener("DOMContentLoaded", () => {
+    const heroImage = document.querySelector(".hero-image");
+    const heroText = document.querySelector(".hero-overlay-text");
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          heroImage.classList.add("fade-in-right");
+          heroText.classList.add("fade-in-left");
+        } else {
+          heroImage.classList.remove("fade-in-right");
+          heroText.classList.remove("fade-in-left");
+        }
+      });
+    }, {
+      threshold: 0.4
+    });
+  
+    observer.observe(document.querySelector(".hero-image-container"));
+  });
+  
