@@ -1,3 +1,4 @@
+
 html, body {
   margin: 0;
   padding: 0;
@@ -7,12 +8,11 @@ html {
   scroll-behavior: smooth;
 }
 body {
-    background-color: rgb(252, 238, 247); /* Light pink */
+    background-color: #fff8ef; /* Light pink */
     margin: 0;
     padding: 0;
-
-    font-family: 'amienne', Arial, sans-serif; /* Use Amienne font */
     line-height: 1.6;
+    font-family: 'Ovo', serif;
   }
 
   a {
@@ -31,9 +31,7 @@ body {
   gap: clamp(8px, 4vw, 60px);
   padding: 15px;
   width: 100%;
-  background-color: #fff0f5;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  background-color: #dddacb;
   box-sizing: border-box;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 9999;
@@ -45,12 +43,12 @@ body {
 /* SHARED STYLE FOR ALL NAV ITEMS */
 .nav-item {
   position: relative;
-  font-family: Arial, sans-serif;
+  font-family: 'Parisienne', cursive;
   font-weight: bold;
-  font-size: clamp(0.6rem, 4vw, 1.5rem);
+  font-size: clamp(0.6rem, 4vw, 3rem);
   padding: 4px 10px;
   text-decoration: none;
-  color: black;
+  color: #3f725b;
   cursor: pointer;
 }
 
@@ -64,8 +62,8 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff0f5;
-  border: 1px solid black;
+  background-color: #dddacb;
+  border-radius: 6px;
   min-width: 150px;
   z-index: 1000;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -78,11 +76,11 @@ body {
   display: block;
   padding: 8px 16px;
   text-decoration: none;
-  color: black;
+  color: #595454;
 }
 
 .dropdown-menu a:hover {
-  background-color: #f2d4e6;
+  background-color: #c7c5ba;
 }
 
 /* SHOW MENU ON HOVER WITH EASING */
@@ -98,7 +96,7 @@ body {
 .nav-link {
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color: #3f725b;
 }
 
   @media screen and (max-width: 800px) {
@@ -119,9 +117,9 @@ body {
     }
   }
   .nav-button {
-    background-color: #fff0f5;
-    color: rgb(0, 0, 0);
-    font-size: clamp(0.6rem, 4vw, 1.5rem);
+    background-color: #dddacb;
+    color: #3f725b;
+    font-size: clamp(0.6rem, 4vw, 3rem);
     padding: 4px 10px;
     border: none;
     border-radius: 6px;
@@ -130,7 +128,7 @@ body {
   }
   
   .nav-button:hover {
-    background-color: #f7e3e9;
+    background-color: #cac7b9;
   }
   /* Header */
   .header {
@@ -140,6 +138,7 @@ body {
     width: 100%;
     padding: 10px;
     text-align: center;
+  
   }
   
   .header-item {
@@ -189,10 +188,11 @@ body {
     bottom: 5%;
     left: 5%;
     transform: translate(-50%, -50%);
+    
   
-    background-color: rgba(255, 240, 245, 0.9);
-    padding: 1rem 1.25rem;
-    padding-top: 0rem;
+    background-color: #fff8ef;
+    padding: .5rem .75rem;
+    padding-top: 0.5rem;
     border-radius: 12px;
     text-align: left;
   
@@ -221,23 +221,28 @@ body {
   .hero-button {
     background: none;
     border: none;
-    font-size: clamp(0.5rem, 2vw, 2rem);
-    color: #000;
+    font-size: clamp(0.75rem, 2.5vw, 2rem);
+    color: #63552d;
     text-decoration: underline;
     text-align: left;
     cursor: pointer;
     padding: 0;
     margin: 0;
+    font-family: 'Ovo', serif;
   }
-  
+  .hero-button:hover {
+    color: #191308; /* Darker shade of original color */
+    filter: brightness(0.5);
+  }
+
   @media (max-width: 500px) {
     .hero-overlay-text {
       position: absolute;
       top: 50%;
       left: 1rem;
   
-      padding: 0.75rem 1rem;
-      background-color: rgba(255, 240, 245, 0.9);
+      padding: 0.5rem .75rem;
+      background-color: #fff8ef;
       border-radius: 12px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   
@@ -350,7 +355,7 @@ body {
   font-weight: bold;
   font-size: clamp(.05rem, 3vw, 4rem); /* 🔁 responsive font size */
   line-height: 1.2;
-  color: black;
+  color: #63552d;
   text-align: center;
   text-decoration: none;
 
@@ -365,6 +370,17 @@ body {
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
+.flex-container:hover img,
+.flex-container:hover .name {
+  transform: scale(1.05);
+}
+
+.flex-container img,
+.name {
+  transition: transform 0.3s ease; /* Add transition to both elements */
+}
+
 
 /* When in view */
 .flex-container.fade-in {
@@ -393,11 +409,20 @@ body {
 
 /* ✅ Optional for full-section layout */
 .section-one {
-  background-color: rgb(252, 238, 247);
+  background-color: #fff8ef;
+  color: #63552d;
 }
 
 .section-two {
-  background-color: #f0f8ff;
+  background-color: #fff8e9;
+  color: #597b6a;
   min-height: 100vh;
+}
+
+.section-three{
+  background-color: #e8e5de;
+  min-height: 100vh;
+  color: black;
+
 }
   
