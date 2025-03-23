@@ -1,0 +1,347 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+    background-color: rgb(252, 238, 247); /* Light pink */
+    margin: 0;
+    padding: 0;
+
+    font-family: 'amienne', Arial, sans-serif; /* Use Amienne font */
+    line-height: 1.6;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+/* NAV BAR */
+.nav {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:auto;
+  top:0;
+  gap: clamp(8px, 4vw, 60px);
+  padding: 15px;
+  width: 100%;
+  background-color: #fff0f5;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+.nav.scrolled {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* SHARED STYLE FOR ALL NAV ITEMS */
+.nav-item {
+  position: relative;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: clamp(0.6rem, 4vw, 1.5rem);
+  padding: 4px 10px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+/* DROPDOWN MENU - HIDDEN INITIALLY */
+.dropdown-menu {
+  opacity: 0;
+  transform: translateY(10px);  /* Slide down effect */
+  pointer-events: none;         /* Prevent interaction when hidden */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff0f5;
+  border: 1px solid black;
+  min-width: 150px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  flex-direction: column;
+}
+
+/* EACH LINK IN THE DROPDOWN */
+.dropdown-menu a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f2d4e6;
+}
+
+/* SHOW MENU ON HOVER WITH EASING */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);     /* Reset slide */
+  pointer-events: auto;         /* Allow interaction */
+  transition: opacity 0.3s ease-out, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  display: flex;
+}
+
+/* OPTIONAL: STYLING FOR THE TRIGGER SPAN */
+.nav-link {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+  @media screen and (max-width: 800px) {
+    .nav {
+      gap: 15px; /* smaller gap as screen shrinks */
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .nav {
+      gap: 9px; /* even smaller on phones */
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .nav {
+      gap: 5px; /* minimum gap for tiny screens */
+    }
+  }
+  .nav-button {
+    background-color: #fff0f5;
+    color: rgb(0, 0, 0);
+    font-size: clamp(0.6rem, 4vw, 1.5rem);
+    padding: 4px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-button:hover {
+    background-color: #f7e3e9;
+  }
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .header-item {
+    text-align: center;
+    flex: 1;
+    padding: 5px;
+    font-weight: bold;
+    font-size: clamp(.05rem, 6vw, 4rem); /* Auto-scales the text */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+  
+  
+  /* Hero section */
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Left Text Side */
+.hero-text {
+  flex: 0 1 40%;
+  color: #FFA733;
+  padding: 40px;
+}
+
+.hero-text h2 {
+  font-size: clamp(1.5rem, 4vw, 6rem);
+  margin-bottom: 20px;
+}
+
+.hero-text strong {
+  font-size: clamp(.9rem, 2vw, 3rem);
+  color: white;
+}
+
+/* Right Image Side */
+.hero-image {
+  flex: 0 1 60%;
+  height: 100%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-button {
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: clamp(.9rem, 2vw, 1.4rem);
+  font-weight: bold;
+  color: #FFA733;
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.hero-button:hover {
+  color: #ffb855;
+}
+ /* Initial state */
+.hero-text,
+.hero-image {
+  opacity: 0;
+  transform: translateX(0); /* Prevent jump */
+}
+
+/* Animate text from the left */
+.hero-text.fade-in-left {
+  animation: slideFadeLeft 0.8s ease forwards;
+}
+
+/* Animate image from the right */
+.hero-image.fade-in-right {
+  animation: slideFadeRight 0.8s ease forwards;
+  animation-delay: .15s;
+}
+
+/* Keyframes */
+@keyframes slideFadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.row {
+  display: flex;
+  flex-wrap: nowrap; /* 🔒 Prevent wrapping */
+  justify-content: space-between; /* 🔁 Distribute space */
+  align-items: flex-start;
+  padding: 20px;
+  gap: clamp(10px, 5vw, 40px); /* Responsive gap */
+  overflow-x: auto; /* ✅ Prevent overflow by allowing scroll if too tight */
+}
+
+.flex-container {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 0; /* Prevent flex from overflowing */
+  transition: transform 0.3s ease;
+}
+
+.flex-container:hover {
+  transform: scale(1.02);
+}
+
+.flex-container img {
+  width: 100%;
+  height: auto;
+  max-width: clamp(50px, 20vw, 1200px); /* 🔁 responsive image size */
+  border-radius: 6px;
+  display: block;
+}
+
+.name {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: clamp(.05rem, 3vw, 4rem); /* 🔁 responsive font size */
+  line-height: 1.2;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+  
+  /* 🎯 Cards (flex-container) */
+.flex-container {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* When in view */
+.flex-container.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🎯 Section fades (about, etc.) */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  pointer-events: none;
+}
+
+/* When in view */
+.fade-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.transition-slow {
+  transition: opacity 3s ease, transform 3s ease;
+}
+
+/* ✅ Optional for full-section layout */
+.section-one {
+  background-color: rgb(252, 238, 247);
+}
+
+.section-two {
+  background-color: #f0f8ff;
+  min-height: 100vh;
+}
+  
