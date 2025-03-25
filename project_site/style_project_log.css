@@ -8,7 +8,7 @@
     scroll-behavior: smooth;
   }
   body {
-    background-color: #ffffff;
+    background-color: #f1efef;
     font-family: 'Newsreader', serif;
     line-height: 1.6;
   }
@@ -21,115 +21,116 @@
     }
   
   /* NAV BAR */
-  .nav {
-    position: sticky;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:auto;
-    top:0;
-    gap: clamp(8px, 4vw, 60px);
-    padding: 15px;
-    width: 100%;
-    background-color: #dddacb;
-    box-sizing: border-box;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
-  }
-  .nav.scrolled {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  /* NAV BAR */
+.nav {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:auto;
+  top:0;
+  gap: clamp(8px, 4vw, 60px);
+  padding: 15px;
+  width: 100%;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+.nav.scrolled {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* SHARED STYLE FOR ALL NAV ITEMS */
+.nav-item {
+  position: relative;
+  font-family: 'Radley', serif;
+  font-weight: bold;
+  font-size: clamp(0.6rem, 4vw, 3rem);
+  padding: 4px 10px;
+  text-decoration: none;
+  color: #12a7d0;
+  cursor: pointer;
+}
+
+/* DROPDOWN MENU - HIDDEN INITIALLY */
+.dropdown-menu {
+  opacity: 0;
+  transform: translateY(10px);  /* Slide down effect */
+  pointer-events: none;         /* Prevent interaction when hidden */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f8f8f8;
+  border-radius: 6px;
+  min-width: 150px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  flex-direction: column;
+}
+
+/* EACH LINK IN THE DROPDOWN */
+.dropdown-menu a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #12a7d0;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgb(176, 191, 198);
+}
+
+/* SHOW MENU ON HOVER WITH EASING */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);     /* Reset slide */
+  pointer-events: auto;         /* Allow interaction */
+  transition: opacity 0.3s ease-out, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  display: flex;
+}
+
+/* OPTIONAL: STYLING FOR THE TRIGGER SPAN */
+.nav-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #12a7d0;
+}
+
+  @media screen and (max-width: 800px) {
+    .nav {
+      gap: 15px; /* smaller gap as screen shrinks */
+    }
   }
   
-  /* SHARED STYLE FOR ALL NAV ITEMS */
-  .nav-item {
-    position: relative;
-    font-family: 'Parisienne', cursive;
-    font-weight: bold;
+  @media screen and (max-width: 600px) {
+    .nav {
+      gap: 9px; /* even smaller on phones */
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .nav {
+      gap: 5px; /* minimum gap for tiny screens */
+    }
+  }
+  .nav-button {
+    background-color: #f8f8f8;
+    color: #12a7d0;
     font-size: clamp(0.6rem, 4vw, 3rem);
     padding: 4px 10px;
-    text-decoration: none;
-    color: #3f725b;
-    cursor: pointer;
-  }
-  
-  /* DROPDOWN MENU - HIDDEN INITIALLY */
-  .dropdown-menu {
-    opacity: 0;
-    transform: translateY(10px);  /* Slide down effect */
-    pointer-events: none;         /* Prevent interaction when hidden */
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #dddacb;
+    border: none;
     border-radius: 6px;
-    min-width: 150px;
-    z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 10px 0;
-    flex-direction: column;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
-  /* EACH LINK IN THE DROPDOWN */
-  .dropdown-menu a {
-    display: block;
-    padding: 8px 16px;
-    text-decoration: none;
-    color: #595454;
+  .nav-button:hover {
+    background-color: rgb(176, 191, 198);
   }
-  
-  .dropdown-menu a:hover {
-    background-color: #c7c5ba;
-  }
-  
-  /* SHOW MENU ON HOVER WITH EASING */
-  .dropdown:hover .dropdown-menu {
-    opacity: 1;
-    transform: translateY(0);     /* Reset slide */
-    pointer-events: auto;         /* Allow interaction */
-    transition: opacity 0.3s ease-out, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-    display: flex;
-  }
-  
-  /* OPTIONAL: STYLING FOR THE TRIGGER SPAN */
-  .nav-link {
-    display: inline-block;
-    text-decoration: none;
-    color: #3f725b;
-  }
-  
-    @media screen and (max-width: 800px) {
-      .nav {
-        gap: 15px; /* smaller gap as screen shrinks */
-      }
-    }
-    
-    @media screen and (max-width: 600px) {
-      .nav {
-        gap: 9px; /* even smaller on phones */
-      }
-    }
-    
-    @media screen and (max-width: 400px) {
-      .nav {
-        gap: 5px; /* minimum gap for tiny screens */
-      }
-    }
-    .nav-button {
-      background-color: #dddacb;
-      color: #3f725b;
-      font-size: clamp(0.6rem, 4vw, 3rem);
-      padding: 4px 10px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    
-    .nav-button:hover {
-      background-color: #cac7b9;
-    }
   
   /* Section Styling */
   .section-one {
@@ -137,6 +138,7 @@
   }
   .section-one h1 {
     font-size: clamp(2rem, 5vw, 4rem); /* min, preferred, max */
+    color: #1284a4;
   }
   
   .section-one p {
@@ -153,7 +155,7 @@
     font-size: clamp(1.5rem, 5vw, 3rem);
     font-weight: bold;
     margin-bottom: clamp(10px, 2vw, 20px);
-    color: #111;
+    color: #0d6c87;
   }
   
   .logs-intro p {
@@ -189,6 +191,7 @@
     font-weight: bold;
     font-size: clamp(1.5rem, 2vw, 2.5rem); /* ✅ responsive font size */
     margin-bottom: 10px;
+    color: #1087a8;
   }
   
   .log-image-group img {
