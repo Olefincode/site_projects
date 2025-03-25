@@ -142,7 +142,7 @@
   }
   
   .section-one p {
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
   }
   
   .logs-intro {
@@ -159,7 +159,7 @@
   }
   
   .logs-intro p {
-    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     line-height: 1.6;
     color: #333;
     max-width: 800px;
@@ -189,7 +189,7 @@
   
   .log-date {
     font-weight: bold;
-    font-size: clamp(1.5rem, 2vw, 2.5rem); /* ✅ responsive font size */
+    font-size: clamp(1.5rem, 2vw, 3.5rem); /* ✅ responsive font size */
     margin-bottom: 10px;
     color: #1087a8;
   }
@@ -204,7 +204,7 @@
   .log-text {
     flex: 1 1 clamp(250px, 50%, 600px);
     max-width: 100%;
-    font-size: clamp(0.9rem, 1.5vw, 1.1rem); /* ✅ responsive text */
+    font-size: clamp(0.9rem, 1.5vw, 2rem); /* ✅ responsive text */
     line-height: 1.6;
   }
 

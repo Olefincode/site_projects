@@ -146,7 +146,7 @@ body {
     flex: 1;
     padding: 5px;
     font-weight: bold;
-    font-size: clamp(.05rem, 2.5vw, 4rem); /* Auto-scales the text */
+    font-size: clamp(.05rem, 2.5vw, 2.3rem); /* Auto-scales the text */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -168,7 +168,7 @@ body {
   .hero-image-container {
     position: relative;
     width: 100%;
-    min-height: clamp(700px, 60vh, 1200px); /* Make sure it doesn't collapse */
+    min-height: 1400px; /* Make sure it doesn't collapse */
     overflow: hidden;
   }
   
@@ -206,14 +206,14 @@ body {
   
   /* 🔧 Header spacing fix */
   .hero-overlay-text h1 {
-    font-size: clamp(.9rem, 4vw, 1.75rem);
+    font-size: clamp(.05rem, 3vw, 3rem);
     margin: 0 0 0.5rem 0; /* ⬅ no top margin, small bottom margin */
     line-height: 1.2;
   }
   
   /* 🔧 Strong text spacing */
   .hero-overlay-text strong {
-    font-size: clamp(.9rem, 3vw, 1.75rem);
+    font-size: clamp(.05rem, 3vw, 3rem);
     margin: 0 0 1rem 0;  /* ⬅ space below */
     display: block;
     line-height: 1.4;
@@ -239,7 +239,7 @@ body {
   }
 
   .hero-overlay-text2 h1 {
-    font-size: clamp(.8rem, 4vw, 1.7rem);
+    font-size: clamp(.05rem, 3vw, 3rem);
     color: #ffffff;
     margin: 0 0 0.5rem 0; /* ⬅ no top margin, small bottom margin */
     line-height: 1.2;
@@ -247,7 +247,7 @@ body {
   }
 
   .hero-overlay-text2 p {
-    font-size: clamp(.75rem, 4vw, 1rem);
+    font-size: clamp(.05rem, 3vw, 3rem);
     margin: 0 0 0.5rem 0; /* ⬅ no top margin, small bottom margin */
     line-height: 1.2;
     color: #ffffff;
@@ -259,7 +259,7 @@ body {
   .hero-button {
     background: none;
     border: none;
-    font-size: clamp(0.75rem, 2.5vw, 1.75rem);
+    font-size: clamp(.05rem, 3vw, 3rem);
     color: #12a7d0;
     text-decoration: underline;
     text-align: left;
@@ -273,7 +273,12 @@ body {
     filter: brightness(0.5);
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
+    .hero-image-container {
+      position: relative;
+      width: 100%;
+      min-height: 700px
+    }
     .hero-overlay-text {
       position: absolute;
       top: 5%;
@@ -292,14 +297,6 @@ body {
       max-height: clamp(200px, 30vh, 4000px);     /* ✅ added from second block */
       overflow-y: auto;       /* ✅ added from second block */
       box-sizing: border-box;
-    }
-  
-    .hero-overlay-text h2,
-    .hero-overlay-text strong,
-    .hero-button {
-      margin: 0;
-      line-height: 1.2;
-      font-size: clamp(0.9rem, 4vw, 1.1rem);
     }
   
     .hero-button {
@@ -390,7 +387,7 @@ body {
 .name {
   margin-top: 10px;
   font-weight: bold;
-  font-size: clamp(.05rem, 3vw, 4rem); /* 🔁 responsive font size */
+  font-size: clamp(.05rem, 3vw, 2.5rem); /* 🔁 responsive font size */
   line-height: 1.2;
   color: #22c4d0;
   text-align: center;
