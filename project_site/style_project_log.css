@@ -1,27 +1,26 @@
-/* Reset + Layout */
-* {
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+    background-color: #efeaea; /* Light pink */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    background-color: #f1efef;
-    font-family: 'Newsreader', serif;
     line-height: 1.6;
+    font-family: 'Radley', serif;
   }
-  
-  /* Shared Links */
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-  
-  /* NAV BAR */
-  /* NAV BAR */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+/* NAV BAR */
 .nav {
   position: sticky;
   display: flex;
@@ -32,7 +31,7 @@
   gap: clamp(8px, 4vw, 60px);
   padding: 15px;
   width: 100%;
-  background-color: #f8f8f8;
+  background-color: #dedfe0;
   box-sizing: border-box;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 9999;
@@ -46,7 +45,7 @@
   position: relative;
   font-family: 'Radley', serif;
   font-weight: bold;
-  font-size: clamp(0.6rem, 4vw, 3rem);
+  font-size: clamp(.6rem, 2.5vw, 2.3rem);
   padding: 4px 10px;
   text-decoration: none;
   color: #12a7d0;
@@ -63,7 +62,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #f8f8f8;
+  background-color: #dedfe0;
   border-radius: 6px;
   min-width: 150px;
   z-index: 1000;
@@ -118,9 +117,9 @@
     }
   }
   .nav-button {
-    background-color: #f8f8f8;
+    background-color: #dedfe0;
     color: #12a7d0;
-    font-size: clamp(0.6rem, 4vw, 3rem);
+    font-size: clamp(.6rem, 2.5vw, 2.3rem);
     padding: 4px 10px;
     border: none;
     border-radius: 6px;

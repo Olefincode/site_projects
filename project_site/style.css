@@ -45,7 +45,7 @@ body {
   position: relative;
   font-family: 'Radley', serif;
   font-weight: bold;
-  font-size: clamp(0.6rem, 4vw, 3rem);
+  font-size: clamp(.6rem, 2.5vw, 2.3rem);
   padding: 4px 10px;
   text-decoration: none;
   color: #12a7d0;
@@ -119,7 +119,7 @@ body {
   .nav-button {
     background-color: #dedfe0;
     color: #12a7d0;
-    font-size: clamp(0.6rem, 4vw, 3rem);
+    font-size: clamp(.6rem, 2.5vw, 2.3rem);
     padding: 4px 10px;
     border: none;
     border-radius: 6px;
@@ -146,12 +146,16 @@ body {
     flex: 1;
     padding: 5px;
     font-weight: bold;
-    font-size: clamp(.05rem, 2.5vw, 2.3rem); /* Auto-scales the text */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
   }
+
+  .header-item h1{
+    font-size: clamp(.7rem, 3vw, 3rem) !important;
+  }
+
   
   
   .hero-overlay-section {
@@ -206,14 +210,14 @@ body {
   
   /* 🔧 Header spacing fix */
   .hero-overlay-text h1 {
-    font-size: clamp(.05rem, 3vw, 3rem);
+    font-size: clamp(.05rem, 3vw, 2.3rem);
     margin: 0 0 0.5rem 0; /* ⬅ no top margin, small bottom margin */
     line-height: 1.2;
   }
   
   /* 🔧 Strong text spacing */
   .hero-overlay-text strong {
-    font-size: clamp(.05rem, 3vw, 3rem);
+    font-size: clamp(.05rem, 3vw, 2.3rem);
     margin: 0 0 1rem 0;  /* ⬅ space below */
     display: block;
     line-height: 1.4;
@@ -239,7 +243,7 @@ body {
   }
 
   .hero-overlay-text2 h1 {
-    font-size: clamp(.05rem, 3vw, 3rem);
+    font-size: clamp(.05rem, 3vw, 2.3rem);
     color: #ffffff;
     margin: 0 0 0.5rem 0; /* ⬅ no top margin, small bottom margin */
     line-height: 1.2;
@@ -247,7 +251,7 @@ body {
   }
 
   .hero-overlay-text2 p {
-    font-size: clamp(.05rem, 3vw, 3rem);
+    font-size: clamp(.05rem, 3vw, 2.3rem);
     margin: 0 0 0.5rem 0; /* ⬅ no top margin, small bottom margin */
     line-height: 1.2;
     color: #ffffff;
@@ -259,7 +263,7 @@ body {
   .hero-button {
     background: none;
     border: none;
-    font-size: clamp(.05rem, 3vw, 3rem);
+    font-size: clamp(.05rem, 3vw, 2.3rem);
     color: #12a7d0;
     text-decoration: underline;
     text-align: left;
@@ -387,7 +391,7 @@ body {
 .name {
   margin-top: 10px;
   font-weight: bold;
-  font-size: clamp(.05rem, 3vw, 2.5rem); /* 🔁 responsive font size */
+  font-size: clamp(.05rem, 3vw, 2rem); /* 🔁 responsive font size */
   line-height: 1.2;
   color: #22c4d0;
   text-align: center;
@@ -448,11 +452,26 @@ body {
   font-family: 'IBM Plex Serif', serif;
 }
 
+.section-one h1{
+  font-size: clamp(.05rem, 3vw, 2.3rem);
+}
+
+.section-one p{
+  font-size: clamp(.05rem, 3vw, 2rem);
+}
 .section-two {
   background-color: #ffffff;
   font-family: 'Tinos', serif;
   color: #000000;
   min-height: 100vh;
+}
+
+.section-two h1{
+  font-size: clamp(.05rem, 3vw, 2.3rem);
+}
+
+.section-two p{
+  font-size: clamp(.05rem, 3vw, 2rem);
 }
 
 .section-three{
@@ -462,4 +481,11 @@ body {
   font-family: 'DM Serif Text', serif;
 
 }
-  
+
+.section-three h1{
+  font-size: clamp(.05rem, 3vw, 2.3rem);
+}
+
+.section-three p{
+  font-size: clamp(.05rem, 3vw, 2rem);
+}
