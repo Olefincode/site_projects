@@ -473,6 +473,9 @@ body {
 
 .section-two p{
   font-size: clamp(.05rem, 3vw, 2rem);
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .section-three{
