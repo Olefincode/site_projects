@@ -472,7 +472,8 @@ body {
 }
 
 .section-two p{
-  font-size: clamp(.05rem, 3vw, 2rem);
+  font-size: clamp(.05rem, 2vw, 2rem);
+  text-align: left;
   white-space: normal;
   word-wrap: break-word;
   overflow-wrap: break-word;
