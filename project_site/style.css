@@ -473,6 +473,7 @@ body {
 
 .section-two p{
   font-size: clamp(.05rem, 2vw, 2rem);
+  width: 95%;
   text-align: left;
   white-space: normal;
   word-wrap: break-word;
