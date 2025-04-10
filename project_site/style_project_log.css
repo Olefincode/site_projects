@@ -164,12 +164,18 @@ body {
     color: #333;
     max-width: 800px;
     margin: 0 auto;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .log-entry {
     margin: 40px 0;
     padding-bottom: 40px;
     border-bottom: 1px solid #ccc;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .log-content {
