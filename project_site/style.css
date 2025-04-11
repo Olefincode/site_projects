@@ -491,7 +491,7 @@ body {
 
 
 
-.mentor-card.fade-in {
+.mentor-container.fade-in {
   opacity: 1;
   transform: translateY(0);
 }
