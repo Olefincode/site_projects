@@ -1,4 +1,3 @@
-
 html, body {
   margin: 0;
   padding: 0;
@@ -491,7 +490,14 @@ body {
 
 
 
+.mentor-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
 
+.mentor-card:hover {
+  transform: scale(1.05);
+}
 
 
 .mentor-card .name {
@@ -507,16 +513,6 @@ body {
 .mentor-card:hover .name {
   transform: scale(1.05);
 }
-
-.mentor-card.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.mentor-card:hover {
-  transform: scale(1.05);
-}
-
 
 
 /* 🎯 Section fades (about, etc.) */
