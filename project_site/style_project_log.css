@@ -88,7 +88,7 @@ body {
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   transform: translateY(0);     /* Reset slide */
-  pointer-events: auto;         /* Allow interaction */
+  pointer-events: auto !important;         /* Allow interaction */
   transition: opacity 0.3s ease-out, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
   display: flex;
 }
