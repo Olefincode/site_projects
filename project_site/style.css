@@ -491,14 +491,7 @@ body {
 
 
 
-.mentor-card.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
 
-.mentor-card:hover {
-  transform: scale(1.05);
-}
 
 
 .mentor-card .name {
@@ -508,6 +501,15 @@ body {
   font-size: clamp(.05rem, 3vw, 3.5rem) !important;
   color: #22c4d0;
   transition: transform 0.3s ease;
+}
+
+.mentor-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mentor-card:hover {
+  transform: scale(1.05);
 }
 
 .mentor-card:hover img,
