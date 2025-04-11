@@ -503,9 +503,9 @@ body {
   transition: transform 0.3s ease;
 }
 
-
-.mentor-card img, .name {
-  transition: transform 0.3s ease; /* Add transition to both elements */
+.mentor-card:hover img,
+.mentor-card:hover .name {
+  transform: scale(1.05);
 }
 
 .mentor-card.fade-in {
