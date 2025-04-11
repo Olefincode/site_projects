@@ -503,6 +503,11 @@ body {
   transition: transform 0.3s ease;
 }
 
+
+.mentor-card img, .name {
+  transition: transform 0.3s ease; /* Add transition to both elements */
+}
+
 .mentor-card.fade-in {
   opacity: 1;
   transform: translateY(0);
@@ -512,10 +517,6 @@ body {
   transform: scale(1.05);
 }
 
-.mentor-card:hover img,
-.mentor-card:hover .name {
-  transform: scale(1.05);
-}
 
 
 /* 🎯 Section fades (about, etc.) */
