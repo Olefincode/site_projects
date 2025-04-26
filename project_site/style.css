@@ -273,7 +273,7 @@ body {
   .hero-button {
     background: none;
     border: none;
-    font-size: clamp(.05rem, 1.5vw, 1rem);
+    font-size: clamp(.05rem, 1.5vw, 1.5rem) !important;
     color: #12a7d0;
     text-decoration: underline;
     text-align: left;
