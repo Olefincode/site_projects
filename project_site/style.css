@@ -490,28 +490,38 @@ body {
 
 
 
+/* 🔹 Default mentor card hidden and slid down */
+.mentor-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* 🔹 When in view */
 .mentor-card.fade-in {
   opacity: 1;
   transform: translateY(0);
 }
 
-.mentor-card:hover {
+/* 🔹 Smooth transition for image and name inside mentor card */
+.mentor-card img,
+.mentor-card .name {
+  transition: transform 0.3s ease;
+}
+
+/* 🔹 Hover behavior: only scale image and name */
+.mentor-card:hover img,
+.mentor-card:hover .name {
   transform: scale(1.05);
 }
 
-
+/* 🔹 Styling for mentor name */
 .mentor-card .name {
   margin-top: 10px;
   white-space: nowrap;
   font-weight: bold;
   font-size: clamp(.05rem, 3vw, 3.5rem) !important;
   color: #22c4d0;
-  transition: transform 0.3s ease;
-}
-
-.mentor-card:hover img,
-.mentor-card:hover .name {
-  transform: scale(1.05);
 }
 
 
@@ -560,7 +570,7 @@ body {
 }
 
 .section-two p{
-  font-size: clamp(.05rem, 2vw, 3.5rem);
+  font-size: clamp(.05rem, 2.5vw, 3.5rem);
   width: 95%;
   text-align: left;
   white-space: normal;
@@ -580,5 +590,40 @@ body {
   font-size: clamp(.05rem, 3vw, 4.5rem)!important;
 }
 
-.section-three p{  font-size: clamp(.05rem, 3vw, 3.5rem);
+.section-three p{  
+  font-size: clamp(.05rem, 2.25vw, 3.5rem);
+  width: 94%;
+  text-align: left;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-indent: -2em;   /* pull the first line back */
+  padding-left: 2em;   /* push all text right by same amount */
 }
+
+.section-three a{
+  color: inherit;
+  text-decoration: underline;
+}
+
+.section-three a:hover {
+  color:#1aa1c7;
+}
+
+.slide-text p {
+  margin-top: 20px;
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-200px); /* Start MUCH farther left so movement is visible */
+  transition: opacity .5s ease-out, transform 1.2s ease-out;
+  transition-delay: 0s, .5s; /* fade in first (0s), start moving after 0.6s */
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
