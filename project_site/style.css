@@ -154,7 +154,7 @@ body {
   }
 
   .header-item h1{
-    font-size: clamp(.7rem, 1.5vw, 2.5rem) !important;
+    font-size: clamp(.7rem, 1.5vw, 2.75rem) !important;
   }
 
   
