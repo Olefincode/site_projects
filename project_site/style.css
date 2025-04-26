@@ -154,7 +154,7 @@ body {
   }
 
   .header-item h1{
-    font-size: clamp(.7rem, 2.5vw, 3rem) !important;
+    font-size: clamp(.7rem, 2.5vw, 5rem) !important;
   }
 
   
@@ -402,7 +402,7 @@ body {
 .name {
   margin-top: 10px;
   font-weight: bold;
-  font-size: clamp(.75rem, 1.5vw, 1.5rem) !important; /* 🔁 responsive font size */
+  font-size: clamp(.75rem, 1.5vw, 2rem) !important; /* 🔁 responsive font size */
   line-height: 1.2;
   color: #22c4d0;
   text-align: center;
@@ -554,7 +554,7 @@ body {
 }
 
 .section-one h1{
-  font-size: clamp(1rem, 1.5vw, 3rem) !important;
+  font-size: clamp(1rem, 1.5vw, 5rem) !important;
 }
 
 .section-one p{
@@ -569,7 +569,7 @@ body {
 
 .section-two h1{
   font-weight: bold;
-  font-size: clamp(1rem, 1.5vw, 3rem)!important;
+  font-size: clamp(1rem, 1.5vw, 5rem)!important;
 }
 
 .section-two p{
@@ -591,7 +591,7 @@ body {
 }
 
 .section-three h1{
-  font-size: clamp(1rem, 1.5vw, 3rem)!important;
+  font-size: clamp(1rem, 1.5vw, 5rem)!important;
 }
 
 .section-three p{  
