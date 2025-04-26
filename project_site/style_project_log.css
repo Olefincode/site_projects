@@ -45,7 +45,7 @@ body {
   position: relative;
   font-family: 'Radley', serif;
   font-weight: bold;
-  font-size: clamp(.6rem, 2.5vw, 2rem) !important;
+  font-size: clamp(.75rem, 2.5vw, 2rem) !important;
   padding: 4px 10px;
   text-decoration: none;
   color: #12a7d0;
@@ -120,7 +120,7 @@ body {
   .nav-button {
     background-color: #dedfe0;
     color: #12a7d0;
-    font-size: clamp(.6rem, 2.5vw, 2rem) !important;
+    font-size: clamp(.75rem, 2.5vw, 2rem) !important;
     padding: 4px 10px;
     border: none;
     border-radius: 6px;
