@@ -45,7 +45,7 @@ body {
   position: relative;
   font-family: 'Radley', serif;
   font-weight: bold;
-  font-size: clamp(.75rem, 2.5vw, 2rem) !important;
+  font-size: clamp(.85rem, 2.5vw, 2rem) !important;
   padding: 4px 10px;
   text-decoration: none;
   color: #12a7d0;
@@ -120,7 +120,7 @@ body {
   .nav-button {
     background-color: #dedfe0;
     color: #12a7d0;
-    font-size: clamp(.75rem, 2.5vw, 2rem) !important;
+    font-size: clamp(.85rem, 2.5vw, 2rem) !important;
     padding: 4px 10px;
     border: none;
     border-radius: 6px;
@@ -575,7 +575,7 @@ body {
 .section-two p{
   font-size: clamp(.75rem, 1.25vw, 1.5rem);
   font-family: 'Bitter', sans-serif;
-  width: 95%;
+  width: 100%;
   text-align: left;
   white-space: normal;
   word-wrap: break-word;
@@ -597,7 +597,7 @@ body {
 .section-three p{  
   font-size: clamp(.65rem, 1.25vw, 1.5rem);
   font-family: 'Inconsolata', sans-serif;
-  width: 95%;
+  width: 100%;
   text-align: left;
   white-space: normal;
   word-wrap: break-word;
