@@ -558,7 +558,10 @@ body {
 }
 
 .section-one p{
-  font-size: clamp(.75rem, 1.5vw, 1.5rem);
+  font-size: clamp(.5rem, 1.5vw, 1rem) !important;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .section-two {
   background-color: #ffffff;
