@@ -234,4 +234,20 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+
+  @media only screen and (max-width: 768px) {
+    .log-content {
+      flex-direction: column;  /* ✅ Stack image over text */
+      align-items: center;
+    }
+  
+    .log-image {
+      max-width: 100%;
+    }
+  
+    .log-text {
+      width: 100%;
+      text-align: left;
+    }
+  }
   
