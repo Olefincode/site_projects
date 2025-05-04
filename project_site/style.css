@@ -587,19 +587,27 @@ body {
 
 .section-three {
   background-color: #ffffff;
-  font-family: 'Exo', sans-serif;
+  flex-direction: column;  /* ✅ Stack image over text */
+  font-family: 'Volkhov', sans-serif;
   color: #000000;
   min-height: 100vh;
+  align-items: center;
 }
 
 .section-three h1{
   font-weight: bold;
   font-size: clamp(1rem, 1.5vw, 5rem)!important;
 }
+.section-three img {
+  width: 95%;
+  height: 95%;             /* ✅ Make image fill the container height */
+  object-fit: cover;        /* ✅ Crop the image */
+  border-radius: 6px;
+}
 
 .section-three p{
   font-size: clamp(.65rem, 1.25vw, 1.5rem);
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Exo', sans-serif;
   width: 100%;
   text-align: left;
   white-space: normal;
@@ -622,7 +630,7 @@ body {
 .section-four p{  
   font-size: clamp(.35rem, 1.25vw, 1.5rem);
   font-family: 'Inconsolata', sans-serif;
-  width: 100%;
+  width: 95%;
   text-align: left;
   white-space: normal;
   word-wrap: break-word;
