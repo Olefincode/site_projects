@@ -678,7 +678,7 @@ body {
 }
 
 .caption * {
-  margin: 10px !important;
+  margin: clamp(2px, 1vw, 10px) !important;
   padding: 0 !important;
   line-height: 1.2;
 }
