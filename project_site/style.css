@@ -652,20 +652,30 @@ body {
 
 .caption {
   margin-top: 12px;
+  margin-bottom: 12px;
   font-size: 1.1rem;
   color: #444;
 }
 
 .caption {
-  background: rgba(0, 0, 0, 0.6);  /* translucent black */
+  background: rgba(60, 60, 60, 0.85);
   color: white;
-  padding: 10px;
-  border-radius: 8px;
-  margin-top: 12px;
-  max-width: 95%;
-  margin-left: auto;
-  margin-right: auto;
+  border-radius: 10px;
   font-size: 1.1rem;
+  font-weight: 600;
+  max-width: 90%;
+  margin: 16px auto 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  line-height: 1; /* tight line spacing */
+}
+
+.caption * {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
 }
 
 .caption h1 {
