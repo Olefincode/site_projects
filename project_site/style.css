@@ -586,6 +586,16 @@ body {
   overflow-wrap: break-word;
 }
 
+.section-two a{
+  font-size: inherit;
+  text-decoration: underline;
+}
+
+.section-two a:hover{
+  color: #00fbff; /* Darker shade of original color */
+  filter: brightness(0.75);
+}
+
 .section-three {
   background-color: #ffffff;
   flex-direction: column;  /* ✅ Stack image over text */
