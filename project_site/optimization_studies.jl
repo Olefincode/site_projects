@@ -22,10 +22,6 @@ begin
 	using CairoMakie, DataFrames, CSV, ColorSchemes, FileIO, PlutoUI, GLMakie, PlutoSliderServer
 end
 
-# ╔═╡ 2b8bb92a-4bc7-49bd-9b92-de939c42289b
-PlutoSliderServer.export_notebook(joinpath(pwd(), "optimization_studies.jl"))
-# will create a file `path/to/notebook.html`
-
 # ╔═╡ 468a0773-0e66-44a3-b81a-d15393e91929
 TableOfContents()
 
@@ -187,7 +183,6 @@ end
 
 # ╔═╡ Cell order:
 # ╠═ff3a0990-1f25-11f0-0c4a-4388fb2af02c
-# ╠═2b8bb92a-4bc7-49bd-9b92-de939c42289b
 # ╠═468a0773-0e66-44a3-b81a-d15393e91929
 # ╟─0977b256-ef1a-41f4-9aea-f723ddc576de
 # ╟─d447c788-66e6-462a-8103-edde30e1361f
