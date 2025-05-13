@@ -4,6 +4,7 @@ Commencement Save the Date Site is [here](https://html-preview.github.io/?url=ht
 
 Project Site is [here](https://olefincode.github.io/site_projects/project_site/
 ).
-https://olefincode.github.io/site_projects/project_site/optimization_studies%20(1).html
+
+https://olefincode.github.io/site_projects/optimization_studies%20(1).html
 All assets and fonts are not mine, please note that this is not a site I made for heavy use just something I wanted to make for family and friends to ensure an easier process for the events I will have.
 
