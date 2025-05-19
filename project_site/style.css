@@ -579,7 +579,7 @@ body {
 .section-two p{
   font-size: clamp(.65rem, 1.25vw, 1.5rem);
   font-family: 'Bitter', sans-serif;
-  width: 100%;
+  width: 95%;
   text-align: left;
   white-space: normal;
   word-wrap: break-word;
@@ -775,7 +775,7 @@ body {
 .section-four p{  
   font-size: clamp(.35rem, 1.25vw, 1.5rem);
   font-family: 'Inconsolata', sans-serif;
-  width: 95%;
+  width: 92%;
   text-align: left;
   white-space: normal;
   word-wrap: break-word;
