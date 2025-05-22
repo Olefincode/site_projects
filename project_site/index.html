@@ -124,9 +124,9 @@
               <h1><b>Pathways</b></h1>
               <p>H₂ and CO₂ feedstocks were derived from HyGear's and their partner company's -- HoSt's -- established technologies.</p>
               <br>
-              <p><b>The conventional pathway </b>will use H₂ and CO₂ feedstocks, produced by HyGear's SMR Grand unit, at 20°C - 50°C and 1-30 bar. In this case we will assume a temperature of 50°C and a pressure of 30 bar, <a href="https://hygear.com/technology/steam-methane-reforming/">as shown on the website</a>. </p>
+              <p><b>The conventional pathway </b>will use 311 scfm H₂ and 200 kg/hr CO₂ feedstocks, produced by HyGear's SMR Grand unit, at 20°C - 50°C and 1-30 bar. In this case we will assume a temperature of 50°C and a pressure of 30 bar, <a href="https://hygear.com/technology/steam-methane-reforming/">as shown on the website</a>. </p>
               <br>
-              <p><b>The green methanol pathway</b> will utilize H₂ gas produced from HyGear's electrolyzer unit and CO₂ gas produced from HoSt's biogas upgrading unit, at corresponding units' outlet conditions of 90°C, 1.5 kPa and 20°C, 2 mbarg -- respectively. </p>
+              <p><b>The green methanol pathway</b> will utilize H₂ gas produced from HyGear's electrolyzer unit and CO₂ gas produced from HoSt's biogas upgrading unit, at corresponding units' outlet conditions of 90°C, 1.5 kPa and 20°C, 2 mbarg -- respectively. In this case, we will assume our CO₂ feedstock is derived from the compact model of the biogas upgrading unit, refering to a CO₂ molar flow rate of 1,200 kg/hr <a href="https://www.host-bioenergy.com/technology/co2-liquefaction/">as shown on the website</a>. H₂ flow rate of 1636 kmol/hr was determined through an <a href="#h2study">optimization study</a>.</p>
         </div>      
       </div>
   </div>
@@ -192,11 +192,28 @@
             </h1>
           </div>
         </div>
+        <div class="carousel-slide" id="h2study">
+          <img src="H2_case_study_results.png">
+          <div class="caption">
+            <h1>
+              Optimization Case Studies - Green Methanol H₂ Feedstock Flow Rate
+              <p>
+                Case study ran in ASPEN HYSYS used to guide green methanol H₂ feedstock flow rate.
+                <br>
+                <br>
+                To minimize CO formation while maximizing MeOH formation and CO₂ conversion, a H₂ molar flow rate of 1636 kmol/hr was selected.
+                <br>
+                <br>
+                <a href="https://github.com/Olefincode/site_projects/tree/main/project_site/optimization%20studies">(src code + case study csv)</a> 
+              </p>
+            </h1>
+          </div>
+        </div>
         <div class="carousel-slide">
           <img src="case_studies.png">
           <div class="caption">
             <h1>
-              Optimization Case Studies
+              Optimization Case Studies - Reactor Operating Conditions
               <p>
                 Case studies ran in ASPEN HYSYS used to guide reactor operating conditions.
                 <br>
@@ -210,10 +227,10 @@
           </div>
         </div>
         <div class="carousel-slide">
-          <a href="https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2021/Jan/IRENA_Innovation_Renewable_Methanol_2021.pdf"><img src="IRENA_market_research.png"></a>
+          <a href="https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2021/Jan/IRENA_Innovation_Renewable_Methanol_2021.pdf"><img src="bloomberg_productionpipeline.png"></a>
           <div class="caption">
             <h1>
-              IRENA Green Methanol Market & Production Forecast <i>(work in progress)</i>
+              North America Green Methanol Market & Production Forecast <i>(work in progress)</i>
               <p>
                 IRENA (International Renewable Energy Agency) predicts a significant increase in sustainable methanol production by 2050. With methanol's growing use as a fuel in countries like China, sustainable production methods are becoming increasingly important. Policies and investments promoting renewable energy will drive the demand for green methanol. The market for sustainable methanol is expected to expand significantly, especially if it begins to replace fossil fuels in transportation, shipping, and power generation industries.
                 <br>
@@ -354,7 +371,27 @@
     current = (current + n + slides.length) % slides.length;
     showSlide(current);
   }
+
+  // Only jump to a slide if a hash-link is clicked
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      const targetSlide = document.querySelector(targetId);
+
+      if (targetSlide && targetSlide.classList.contains('carousel-slide')) {
+        e.preventDefault(); // Prevent default jump
+        const index = Array.from(slides).indexOf(targetSlide);
+        if (index !== -1) {
+          showSlide(index);
+          // Optional: scroll to the carousel if needed
+          targetSlide.scrollIntoView({ behavior: 'smooth' });
+          history.pushState(null, '', targetId); // Update the hash manually
+        }
+      }
+    });
+  });
 </script>
+
 
 <script src="file.js"></script>
 </body>
