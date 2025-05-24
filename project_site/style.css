@@ -586,6 +586,13 @@ body {
   overflow-wrap: break-word;
 }
 
+.section-two img {
+  width: 95%;
+  height: 95%;             /* ✅ Make image fill the container height */
+  object-fit: cover;        /* ✅ Crop the image */
+  border-radius: 6px;
+}
+
 .section-two a{
   font-size: inherit;
   text-decoration: underline;

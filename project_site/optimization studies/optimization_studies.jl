@@ -166,7 +166,7 @@ md" ## 2D Plotting Functions (for electrolysis H₂ molar flow rate) "
 function molar_flow_rates()
 	fig = Figure(size = (1800, 900))
 	df = H2_optimizing_data
-	Label(fig[0, 2], "Electrolysis H₂ Molar Flow Rate Results", fontsize = 30, font=:bold)
+	Label(fig[0, 2], "Electrolytic H₂ Molar Flow Rate Results", fontsize = 30, font=:bold)
 	x = [i for i in df[:, H2_column_names[6]]]
 	for (i, ylabel) in enumerate(H2_column_names[3:5])
 		unit = (occursin("Flow", ylabel) ? "molar flow (kmol/hr)" : "molar fraction")
@@ -195,20 +195,6 @@ function molar_flow_rates()
 			minimum_CO_H2mf = H2_optimizing_data[:, "Molar Flow"][minimum_CO_id]
 			minimum_CO_COmf = H2_optimizing_data[:, ylabel][minimum_CO_id]
 			println("Minimum CO formation of $minimum_CO_COmf kmol/hr at H₂ molar flow rate of $minimum_CO_H2mf kmol/hr")
-			lines!(ax,
-				   x[1:minimum_CO_id],
-				   [minimum_CO_COmf for i = 1:minimum_CO_id],
-				   linewidth=2,
-				   linestyle=:dash,
-				   color = :grey57
-				  )
-			lines!(ax,
-				   [x[minimum_CO_id] for i=1:2],
-				   reverse(range(0, minimum_CO_COmf, 2)),
-				   linewidth=2,
-				   linestyle=:dash,
-				   color = :grey57
-				  )
 		end
 		y_diff = y[argmax(y)] - y[2]
 		xlims!(ax, low=0.0, high=nothing)

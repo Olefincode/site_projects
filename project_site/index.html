@@ -74,7 +74,7 @@
               <div class="flex-container">
                 <img src="https://media.licdn.com/dms/image/v2/C5603AQHbfUfHw713TQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1623455393191?e=2147483647&v=beta&t=03ScMAX4Bba3AeWGlcsPE9dcKgf-2OjtcD1UMnI1GYs" alt="kd temp img">
                 <div class="name"><a href="https://www.linkedin.com/in/kyrstin-datanagan/">Kyrstin Datanagan</a></div>
-                <p><i>(site development, process and chemistry research, process development, ASPEN HYSYS implementation, optimization studies)</i></p>
+                <p><i>(site development, process and chemistry research, process development, ASPEN HYSYS implementation, optimizing reactor design and conditions)</i></p>
               </div>
             </a>
           
@@ -82,7 +82,7 @@
               <div class="flex-container">
                 <img src="https://media.licdn.com/dms/image/v2/D4E03AQE46Jd1gO03cw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1732125526243?e=2147483647&v=beta&t=WA0vNEEFUFfVQowiZ_eWWcpQHRf03aHdD8g8x4Ogxoo" alt="lp temp img">
                 <div class="name"><a href="https://www.linkedin.com/in/lindsey-phan-1222b4331/">Linh Phan</a></div>
-                <p><i>(project management / lead, communications, market research, equipment sizing & pricing, economic & market analysis)</i></p>
+                <p><i>(project management / lead, communications, market research, equipment sizing & pricing, economic & market analysis, P&ID drafting)</i></p>
               </div>
             </a>
           
@@ -121,12 +121,24 @@
               <h1><b>About</b></h1>
               <p>In partnership with HyGear, we are developing a modular, containerized green methanol synthesis unit that utilizes hydrogen and CO₂ from biogas upgrading. The project explores two pathways: (1) using syngas (H₂, CO, and CO₂) produced from steam methane reforming (SMR), and (2) synthesizing methanol directly from biogenic CO₂ and electrolytic hydrogen. Along with optimizing the process to align with HyGear’s SMR unit, the study will also examine the broader potential for captured CO₂, including its use in industries like food and beverage, greenhouse agriculture, or long-term storage through geologic sequestration. With evolving policies such as 45Q tax credits and state-level carbon regulations, the goal is to identify the most viable approach—whether through green methanol production or alternative CO₂ utilization and storage strategies.</p>
               <br>
+              <br>
               <h1><b>Pathways</b></h1>
               <p>H₂ and CO₂ feedstocks were derived from HyGear's and their partner company's -- HoSt's -- established technologies.</p>
               <br>
               <p><b>The conventional pathway </b>will use 311 scfm H₂ and 200 kg/hr CO₂ feedstocks, produced by HyGear's SMR Grand unit, at 20°C - 50°C and 1-30 bar. In this case we will assume a temperature of 50°C and a pressure of 30 bar, <a href="https://hygear.com/technology/steam-methane-reforming/">as shown on the website</a>. </p>
               <br>
-              <p><b>The green methanol pathway</b> will utilize H₂ gas produced from HyGear's electrolyzer unit and CO₂ gas produced from HoSt's biogas upgrading unit, at corresponding units' outlet conditions of 90°C, 1.5 kPa and 20°C, 2 mbarg -- respectively. In this case, we will assume our CO₂ feedstock is derived from the compact model of the biogas upgrading unit, refering to a CO₂ molar flow rate of 1,200 kg/hr <a href="https://www.host-bioenergy.com/technology/co2-liquefaction/">as shown on the website</a>. H₂ flow rate of 1636 kmol/hr was determined through an <a href="#h2study">optimization study</a>.</p>
+              <p><b>The green methanol pathway</b> utilizes hydrogen gas (H₂) produced from HyGear’s electrolyzer unit and carbon dioxide (CO₂) from HoSt’s biogas upgrading unit, at the respective outlet conditions of 90 °C, 1.5 kPa and 20 °C, 2 mbarg. In this case, we assume the CO₂ feedstock is sourced from the compact model of the biogas upgrading unit, corresponding to a CO₂ mass flow rate of 1,200 kg/hr <a href="https://www.host-bioenergy.com/technology/co2-liquefaction/">as shown on the website</a>. The H₂ flow rate of 1,636 kmol/hr was determined through an <a href="#h2study">optimization study</a>.</p>
+              <br>
+              <br>
+              <h1><b>Methanol Synthesis</b></h1>
+              <p>Methanol (MeOH) will be synthesized through the hydrogenation of CO₂ feedstock. The primary reaction pathway is shown below, with the CO₂ → MeOH reaction boxed and competing side reactions listed underneath.</p> 
+              <img src="MeOH_synthesis_rxns.png">
+              <p>Since CO formation competes with MeOH production, a Cu/ZnO/Al₂O₃ (CuZA) catalyst was selected to enhance MeOH selectivity and CO₂ conversion. While there is <a href="https://www.sciencedirect.com/science/article/pii/S0196890424000116?via%3Dihub#s0025">ongoing research into more selective catalysts</a>, CuZA was chosen due to its widespread use in commercial methanol synthesis and its well-documented reaction kinetics. The catalyst kinetics are modeled using the <a href="https://pubs.acs.org/doi/10.1021/acs.iecr.1c04476">Vanden Bussche–Froment model</a>, shown below.</p>
+              <img src="VBF_kinetics.png">
+              <p>Given the extensive literature supporting commercial MeOH production, there is also significant <a href="https://www.sciencedirect.com/science/article/pii/S0196890424000116?via%3Dihub#s0045">research and development into effective reactor models</a>. A Lurgi reactor model — with a boiling water reactor (BWR) design — was selected for its efficient heat recovery through steam generation and structural similarity to shell-and-tube heat exchangers, which simplifies cost estimation and design. The BWR model is based on the pilot plant design described in <a href="https://ucalgary.scholaris.ca/server/api/core/bitstreams/954d122e-74b6-4506-a5d1-f32c5d8ef207/content">Shi, C.’s master’s thesis</a>. The reactor specifications are shown below.</p>
+              <img src="Lurgi_Reactor.png">
+              <br>
+              <p>Optimal <a href="#reactoptstudy">reactor operating conditions</a> — including length, temperature, and pressure — as well as <a href="#h2study">electrolytic H₂ feed rate</a> were determined through simulation case studies and selected to minimize CO formation while maximizing MeOH production and CO₂ conversion.</p>
         </div>      
       </div>
   </div>
@@ -152,10 +164,10 @@
           </div>
         </div>
         <div class="carousel-slide">
-          <img src="current_model_green.png">
+          <a href="pid_green.png"><img src="pid_green.png"></a>
           <div class="caption">
             <h1>
-              Green Methanol Process
+              Green Methanol Process P&ID <i>(work in progress)</i>
             </h1>
             <p>
               Closer look at green methanol process
@@ -182,10 +194,10 @@
           </div>
         </div>
         <div class="carousel-slide">
-          <img src="current_model_smr.png">
+          <a href="pid_smr.png"><img src="pid_smr.png"></a>
           <div class="caption">
             <h1>
-              Conventional Methanol Process
+              Conventional Methanol Process P&ID <i>(work in progress)</i>
               <p>
                 Closer look at conventional methanol process
               </p>
@@ -193,7 +205,7 @@
           </div>
         </div>
         <div class="carousel-slide" id="h2study">
-          <a href="H2_case_study_results.png"><img src="H2_case_study_results.png"></a>
+          <a href="H2_case_study_results.png"><img src="H2_case_study.png"></a>
           <div class="caption">
             <h1>
               Optimization Case Studies - Green Methanol H₂ Feedstock Flow Rate
@@ -201,7 +213,7 @@
                 Case study ran in ASPEN HYSYS used to guide green methanol H₂ feedstock flow rate.
                 <br>
                 <br>
-                To minimize CO formation while maximizing MeOH formation and CO₂ conversion, a H₂ molar flow rate of 1636 kmol/hr was selected.
+                To minimize CO formation while maximizing methanol (MeOH) production and CO₂ conversion, a hydrogen (H₂) molar flow rate of 1,636 kmol/hr was selected.
                 <br>
                 <br>
                 <a href="https://github.com/Olefincode/site_projects/tree/main/project_site/optimization%20studies">(src code + case study csv)</a> 
@@ -209,7 +221,7 @@
             </h1>
           </div>
         </div>
-        <div class="carousel-slide">
+        <div class="carousel-slide" id="reactoptstudy">
           <a href="case_studies.png"><img src="case_studies.png"></a>
           <div class="caption">
             <h1>
@@ -227,12 +239,12 @@
           </div>
         </div>
         <div class="carousel-slide">
-          <a href="https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2021/Jan/IRENA_Innovation_Renewable_Methanol_2021.pdf"><img src="bloomberg_productionpipeline.png"></a>
+          <a href="https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2021/Jan/IRENA_Innovation_Renewable_Methanol_2021.pdf"><img src="IRENA_market_research.png"></a>
           <div class="caption">
             <h1>
-              North America Green Methanol Market & Production Forecast <i>(work in progress)</i>
+              International Green Methanol Market & Production Forecast
               <p>
-                IRENA (International Renewable Energy Agency) predicts a significant increase in sustainable methanol production by 2050. With methanol's growing use as a fuel in countries like China, sustainable production methods are becoming increasingly important. Policies and investments promoting renewable energy will drive the demand for green methanol. The market for sustainable methanol is expected to expand significantly, especially if it begins to replace fossil fuels in transportation, shipping, and power generation industries.
+                IRENA (International Renewable Energy Agency) forecasts the global green methanol market to grow significantly by 2050, with production projected to reach 500 Mt, including 250 Mt from e-methanol and 135 Mt from bio-methanol. This growth will be driven by demand in transportation, shipping, and chemical production from implementation of sustainable legislature driving the transition from fossil fuels to renewable fuel standards -- such as the <a href="https://www.europarl.europa.eu/committees/en/renewable-energy-directive-red-ii-/product-details/20220214CDT09123">EU's REDII</a>, <a href="https://www.c2es.org/document/us-state-carbon-pricing-policies/">carbon pricing policies</a>, and <a href="https://www.imo.org/en/OurWork/Environment/Pages/2023-IMO-Strategy-on-Reduction-of-GHG-Emissions-from-Ships.aspx">Internation Maritime's net-zero emission, GHG strategy</a>. 
                 <br>
                 <br>
                 <a href="https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2021/Jan/IRENA_Innovation_Renewable_Methanol_2021.pdf">(img src)</a>  
