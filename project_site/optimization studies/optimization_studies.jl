@@ -168,6 +168,7 @@ function molar_flow_rates()
 	df = H2_optimizing_data
 	Label(fig[0, 2], "Electrolytic H₂ Molar Flow Rate Results", fontsize = 30, font=:bold)
 	x = [i for i in df[:, H2_column_names[6]]]
+	xticks = [[0.0, 0.4, 0.8], [0.0, 10.0, 20.0], [0.0, 12.0, 24.0, 36.0]]
 	for (i, ylabel) in enumerate(H2_column_names[3:5])
 		unit = (occursin("Flow", ylabel) ? "molar flow (kmol/hr)" : "molar fraction")
 		if occursin("(CO)", ylabel)
@@ -198,7 +199,7 @@ function molar_flow_rates()
 		end
 		y_diff = y[argmax(y)] - y[2]
 		xlims!(ax, low=0.0, high=nothing)
-		ylims!(ax, low=0.0, high=y[argmax(y)] + y_diff)
+		ylims!(ax, low=0.0, high=nothing)
 	end
 	rowgap!(fig.layout, 20)
 	colgap!(fig.layout, 50)
