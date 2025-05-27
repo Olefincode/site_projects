@@ -367,9 +367,7 @@
 
       </script>
 <script>
-  let current = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
-  if (current === -1) current = 0;
-  showSlide(current); // <== initialize display correctly
+  let current = 0;
   const slides = document.querySelectorAll('.carousel-slide');
 
   function showSlide(index) {
