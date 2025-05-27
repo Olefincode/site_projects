@@ -147,7 +147,7 @@
       <h1><b>Current Results</b></h1>
       <p><i>please scroll left to right to see current work on process development & methanol market research, sources to sourced images can be either accessed by clicking on the "(img src)" link or on the image itself. case study images can be selected as well.</i></p>
       <div class="carousel-container">
-        <div class="carousel-slide">
+        <div class="carousel-slide active">
           <img src="pid_green.png">
           <div class="caption">
             <h1>
@@ -156,12 +156,12 @@
             <p>
               Piping & instrumentation diagram of our green methanol design 
             </p>
-            
+
             <br>
 
           </div>
         </div>
-         <div class="carousel-slide active">
+         <div class="carousel-slide">
           <img src="current_model + tables_green.png">
           <div class="caption">
             <h1>
@@ -367,7 +367,9 @@
 
       </script>
 <script>
-  let current = 0;
+  let current = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+  if (current === -1) current = 0;
+  showSlide(current); // <== initialize display correctly
   const slides = document.querySelectorAll('.carousel-slide');
 
   function showSlide(index) {
