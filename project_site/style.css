@@ -635,6 +635,15 @@ body {
   overflow-wrap: break-word;
   align-items: left;
 }
+.section-three a{
+  font-size: inherit;
+  text-decoration: underline;
+}
+
+.section-three a:hover{
+  color: #ffdddd; /* Darker shade of original color */
+  filter: brightness(1);
+}
 
 .carousel-container {
   position: relative;

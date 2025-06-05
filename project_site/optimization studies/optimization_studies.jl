@@ -169,6 +169,7 @@ function molar_flow_rates()
 	Label(fig[0, 2], "Electrolytic H₂ Molar Flow Rate Results", fontsize = 30, font=:bold)
 	x = [i for i in df[:, H2_column_names[6]]]
 	xticks = [[0.0, 0.4, 0.8], [0.0, 10.0, 20.0], [0.0, 12.0, 24.0, 36.0]]
+	names = ["CO", "CO₂", "MeOH"]
 	for (i, ylabel) in enumerate(H2_column_names[3:5])
 		unit = (occursin("Flow", ylabel) ? "molar flow (kmol/hr)" : "molar fraction")
 		if occursin("(CO)", ylabel)
@@ -179,9 +180,9 @@ function molar_flow_rates()
 			chem = "MeOH "
 		else
 		end
-		ax = Axis(fig[1, i], title = ylabel,
+		ax = Axis(fig[1, i], title = "H₂ Molar Flow Rate (kmol/hr) vs \nOutlet " * names[i] * " Molar Flow Rate (kmol/hr)",
 				xlabel="H₂ Molar Flow Rate\n(kmol/hr)",
-				ylabel="Molar Flow \n(kmol/hr)",
+				ylabel=ylabel * "\n(kmol/hr)",
 				xminorticksvisible = true, yminorticksvisible = true
 				 )
 		y = [i for i in df[:, ylabel]]
@@ -304,12 +305,12 @@ end
 # ╟─0f4a6f2c-9499-41e2-9c3c-629b5002ac99
 # ╟─94980f0b-010e-4b6b-b21d-ac5fbd372936
 # ╟─91000870-8f88-40ea-a3e2-e1c2643157d7
-# ╠═3e35fecf-fa60-4f16-838b-7e48e0572c9e
+# ╟─3e35fecf-fa60-4f16-838b-7e48e0572c9e
 # ╟─50bd288b-ab0d-42d3-89a7-2fbf672f2a33
 # ╟─f99b692d-a61b-4bcd-be3b-d347e8443181
 # ╟─5b6236be-ecd4-41ff-8fa1-426feb25aa16
 # ╟─3606f8a1-8a79-4553-94f6-a9827ef8bb5e
-# ╠═50b3ad57-fff2-4cec-b661-331363fb4f96
+# ╟─50b3ad57-fff2-4cec-b661-331363fb4f96
 # ╟─7e6da3bc-1f24-4d5d-9557-876d0595bf66
 # ╟─3532ff67-54af-4735-b83e-eaffd01e777d
 # ╟─a203e143-1e5d-4ab1-8911-4a1a3a99e97f

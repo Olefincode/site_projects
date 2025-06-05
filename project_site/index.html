@@ -54,6 +54,7 @@
               <h1><b>Development of Biogas-Consuming Methanol Synthesis Unit</b></h1>
               <h2><i>Thank you so much to <a href="https://hygear.com/">HyGear</a> for sponsoring us!</i></h2>
               <button id="scrollToAboutAlt" class="hero-button">click here for project information</button>
+              <button class="hero-button"><a href="https://docs.google.com/document/d/1rIRLYpAgOqmGMztQD-du2fYtxwiiVIvsPGEN0PHrtaY/edit?tab=t.m6ei6av7mvbu">click here for final project report <i>(work in progress)</i></a></button>
             </div>
             <div class="hero-overlay-text2 fade-section">
               <h1> About Us </h1>
@@ -74,7 +75,7 @@
               <div class="flex-container">
                 <img src="https://media.licdn.com/dms/image/v2/C5603AQHbfUfHw713TQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1623455393191?e=2147483647&v=beta&t=03ScMAX4Bba3AeWGlcsPE9dcKgf-2OjtcD1UMnI1GYs" alt="kd temp img">
                 <div class="name"><a href="https://www.linkedin.com/in/kyrstin-datanagan/">Kyrstin Datanagan</a></div>
-                <p><i>(site development, process and chemistry research, process development, ASPEN HYSYS implementation, case study optimization and visualization)</i></p>
+                <p><i>(site development, process and chemistry research, process development, ASPEN HYSYS implementation, case study optimization and visualization, hazards and operability studies, P&ID drafting, and pressure relief system design)</i></p>
               </div>
             </a>
           
@@ -120,6 +121,7 @@
           <div class="header-item">
               <h1><b>About</b></h1>
               <p>In partnership with HyGear, we are developing a modular, containerized green methanol synthesis unit that utilizes hydrogen and CO₂ from biogas upgrading. The project explores two pathways: (1) using syngas (H₂, CO, and CO₂) produced from steam methane reforming (SMR), and (2) synthesizing methanol directly from biogenic CO₂ and electrolytic hydrogen. Along with optimizing the process to align with HyGear’s SMR unit, the study will also examine the broader potential for captured CO₂, including its use in industries like food and beverage, greenhouse agriculture, or long-term storage through geologic sequestration. With evolving policies such as 45Q tax credits and state-level carbon regulations, the goal is to identify the most viable approach—whether through green methanol production or alternative CO₂ utilization and storage strategies.</p>
+              <p><a href="https://docs.google.com/document/d/1rIRLYpAgOqmGMztQD-du2fYtxwiiVIvsPGEN0PHrtaY/edit?tab=t.m6ei6av7mvbu">Final project report <i>(work in progress) </i> can be accessed here</a></p>
               <br>
               <br>
               <h1><b>Pathways</b></h1>
@@ -145,13 +147,14 @@
     <div class="fade-section section-three" id="results">
       <br>
       <h1><b>Current Results</b></h1>
+      <p style="text-align:left">Below are our current results. For a detailed explanation of market research, process development, and economic analysis, please feel free to <a href="https://docs.google.com/document/d/1rIRLYpAgOqmGMztQD-du2fYtxwiiVIvsPGEN0PHrtaY/edit?usp=sharing">view our final project report<i>(work in progress)</i></a>.</p>
       <p><i>please scroll left to right to see current work on process development & methanol market research, sources to sourced images can be either accessed by clicking on the "(img src)" link or on the image itself. case study images can be selected as well.</i></p>
       <div class="carousel-container">
         <div class="carousel-slide active">
           <img src="pid_green.png">
           <div class="caption">
             <h1>
-              Green Methanol Process P&ID <i>(work in progress)</i>
+              Green Methanol Process P&ID
             </h1>
             <p>
               Piping & instrumentation diagram of our green methanol design 
@@ -181,7 +184,7 @@
           <img src="pid_smr.png">
           <div class="caption">
             <h1>
-              Conventional Methanol Process P&ID <i>(work in progress)</i>
+              Conventional Methanol Process P&ID
               <p>
                 Piping & instrumentation diagram of our conventional methanol design 
               </p>
@@ -234,6 +237,60 @@
                 <br>
                 <br>
                 <a href="https://github.com/Olefincode/site_projects/tree/main/project_site/optimization%20studies">(src code + case study csv)</a> 
+              </p>
+            </h1>
+          </div>
+        </div>
+        <div class="carousel-slide" id="hazopstudy">
+          <a href="cameo_chemical_summary.png"><img src="cameo_chemical_summary.png"></a>
+          <div class="caption">
+            <h1>
+              Chemical Hazard Studies
+              <p>
+                Chemicals present in conventional and green methanol pathways were assessed using CAMEO Chemicals data and Safety Data Sheet (SDS) information. Significant health, flammability, and stability hazards are listed in the left-hand table, which also indicates key chemical thresholds, while the right-hand figure displays chemical reactivity hazard data from CAMEO Chemicals. 
+                <br>
+                <br>
+                Tables detailing stream-wise chemical hazards for each process -- including threshold met -- are <a href="hazard_table.pdf">detailed here</a>.
+                <br>
+                <br>
+                An additional assessment on material compatibility with process chemicals was performed to guide piping and equipment material selection, following <a href="https://dl.gasplus.ir/standard-ha/standard-API/%40Standardsharing%20API%20571%202020.pdf">ANSI/API guidelines</a>. Assessment results are detailed in <a href="https://docs.google.com/document/d/1rIRLYpAgOqmGMztQD-du2fYtxwiiVIvsPGEN0PHrtaY/edit?tab=t.m6ei6av7mvbu">our final project report<i>(work in progress)</i></a>.
+                <br>
+                <br>
+                <a href="Report _ CAMEO Chemicals _ NOAA.pdf">(CAMEO Chemicals and SDS data report)</a> 
+              </p>
+            </h1>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <a href="pressure_relief.png"><img src="pressure_relief.png"></a>
+          <div class="caption">
+            <h1>
+              Reactor Pressure Relief System
+              <p>
+                Based on the chemical hazards assessment, a <a href="HazOp.pdf">Hazards and Operability (HazOp) assessment</a> was conducted for the reactor system, resulting in the implementation of a pressure relief system for both pathways.
+                <br>
+                <br>
+                Pressure relief system was implemented to mitigate risks from gas leaks, pipe blockages, flow or pressure fluctuations, and elevated pressure or temperature in the reactor vessel.
+              </p>
+            </h1>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <a href="capex_cost.png"><img src="capex_cost.png"></a>
+          <div class="caption">
+            <h1>
+              Economic Feasibility Analysis <i>(Work In Progress)</i>
+              <p>
+                Utility, capital, raw materials, labor, and sales costs were determined to evaluate methanol pricing for each pathway.  
+                <br>
+                <br>
+                Pathway 1 (SMR-based) showed significantly lower production costs, at $114.29 per kg, compared to $309,095 per kg for Pathway 2 (biogas and electrolysis). Total capital and operating costs for Pathway 1 were $675,286 and $240,000, respectively, while Pathway 2 incurred $1,337,442 in capital costs and $300,000 in operating costs, driven largely by intensive utility demands and sophisticated separation systems. 
+                <br>
+                <br>
+                Despite its high cost, Pathway 2 aligns better with sustainability goals by reducing carbon emissions and avoiding byproduct formation, but will require further optimization to be economically viable.
+                <br>
+                <br>
+                Cost and sizing calculations, as well as, detailed economic analysis of each pathway is <a href="https://docs.google.com/document/d/1rIRLYpAgOqmGMztQD-du2fYtxwiiVIvsPGEN0PHrtaY/edit?tab=t.m6ei6av7mvbu">discussed in our final project report (work in progress)</a>.
               </p>
             </h1>
           </div>
