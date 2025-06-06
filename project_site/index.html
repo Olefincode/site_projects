@@ -24,7 +24,20 @@
 <body>
     <nav class="nav">
         <button class="nav-item nav-button" id="scrollToHome">Home</button>
-        <button class="nav-item nav-button"><a class="nav-item" href="#results">Results</a></button>
+        <div class="nav-item dropdown">
+        <span><a href="#results">Results</a></span>
+        <div class="dropdown-menu">
+          <a href="#econ">Economic Analysis</a>
+          <a href="#market">Market Research</a>
+          <a href="#green_pid">Green P&ID</a>
+          <a href="#green_aspen">Green Simulation</a>
+          <a href="#conv_pid">Conventional P&ID</a>
+          <a href="#conv_aspen">Conventional Simulation</a>
+          <a href="#hazopstudy">Hazards Assessment</a>
+          <a href="#prv">Reactor Pressure Relief</a>
+          <a href="#h2study">Sensitivity Analyses</a>
+        </div>
+        </div>
         <div class="nav-item dropdown">
         <span><a href="project_logs.html">Project Logs</a></span>
         <div class="dropdown-menu">
@@ -150,7 +163,41 @@
       <p style="text-align:left">Below are our current results. For a detailed explanation of market research, process development, and economic analysis, please feel free to <a href="https://docs.google.com/document/d/1rIRLYpAgOqmGMztQD-du2fYtxwiiVIvsPGEN0PHrtaY/edit?usp=sharing">view our final project report<i>(work in progress)</i></a>.</p>
       <p><i>please scroll left to right to see current work on process development & methanol market research, sources to sourced images can be either accessed by clicking on the "(img src)" link or on the image itself. case study images can be selected as well.</i></p>
       <div class="carousel-container">
-        <div class="carousel-slide active">
+        <div class="carousel-slide active" id="econ">
+          <a href="capex_cost.png"><img src="capex_cost.png"></a>
+          <div class="caption">
+            <h1>
+              Economic Feasibility Analysis <i>(Work In Progress)</i>
+              <p>
+                Utility, capital, raw materials, labor, and sales costs were determined to evaluate methanol pricing for each pathway.  
+                <br>
+                <br>
+                Pathway 1 (SMR-based) showed significantly lower production costs, at $114.29 per kg, compared to $309,095 per kg for Pathway 2 (biogas and electrolysis). Total capital and operating costs for Pathway 1 were $675,286 and $240,000, respectively, while Pathway 2 incurred $1,337,442 in capital costs and $300,000 in operating costs, driven largely by intensive utility demands and sophisticated separation systems. 
+                <br>
+                <br>
+                Despite its high cost, Pathway 2 aligns better with sustainability goals by reducing carbon emissions and avoiding byproduct formation, but will require further optimization to be economically viable.
+                <br>
+                <br>
+                Cost and sizing calculations, as well as, detailed economic analysis of each pathway is <a href="https://docs.google.com/document/d/1rIRLYpAgOqmGMztQD-du2fYtxwiiVIvsPGEN0PHrtaY/edit?tab=t.m6ei6av7mvbu">discussed in our final project report (work in progress)</a>.
+              </p>
+            </h1>
+          </div>
+        </div>
+        <div class="carousel-slide" id="market">
+          <a href="https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2021/Jan/IRENA_Innovation_Renewable_Methanol_2021.pdf"><img src="IRENA_market_research.png"></a>
+          <div class="caption">
+            <h1>
+              International Green Methanol Market & Production Forecast
+              <p>
+                IRENA (International Renewable Energy Agency) forecasts the global green methanol market to grow significantly by 2050, with production projected to reach 500 Mt, including 250 Mt from e-methanol and 135 Mt from bio-methanol. This growth will be driven by demand in transportation, shipping, and chemical production from implementation of sustainable legislature driving the transition from fossil fuels to renewable fuel standards -- such as the <a href="https://www.europarl.europa.eu/committees/en/renewable-energy-directive-red-ii-/product-details/20220214CDT09123">EU's REDII</a>, <a href="https://www.c2es.org/document/us-state-carbon-pricing-policies/">carbon pricing policies</a>, and <a href="https://www.imo.org/en/OurWork/Environment/Pages/2023-IMO-Strategy-on-Reduction-of-GHG-Emissions-from-Ships.aspx">International Maritime's net-zero emission, GHG strategy</a>. 
+                <br>
+                <br>
+                <a href="https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2021/Jan/IRENA_Innovation_Renewable_Methanol_2021.pdf">(img src)</a>  
+              </p>
+            </h1>
+          </div>
+        </div>
+        <div class="carousel-slide" id="green_pid">
           <img src="pid_green.png">
           <div class="caption">
             <h1>
@@ -164,7 +211,7 @@
 
           </div>
         </div>
-         <div class="carousel-slide">
+         <div class="carousel-slide" id="green_aspen">
           <a href="current_model + tables_green.png"><img src="current_model + tables_green.png"></a>
           <div class="caption">
             <h1>
@@ -180,7 +227,7 @@
             </p>
           </div>
         </div>
-        <div class="carousel-slide">
+        <div class="carousel-slide" id="conv_pid">
           <img src="pid_smr.png">
           <div class="caption">
             <h1>
@@ -191,7 +238,7 @@
             </h1>
           </div>
         </div>
-        <div class="carousel-slide">
+        <div class="carousel-slide" id="conv_aspen">
           <a href="current_model + tables_smr.png"><img src="current_model + tables_smr.png"></a>
           <div class="caption">
             <h1>
@@ -203,6 +250,40 @@
                 <br>
                 <br>
               Outlined streams: <p style="color: rgb(180, 156, 156)">&nbsp; &nbsp; H₂ (1), CO₂ (2) feed stocks </p><p style="color:rgb(127, 255, 146)">&nbsp; &nbsp; product</p><p style="color: rgb(255, 141, 190)">&nbsp; &nbsp; waste</p><p style="color: aqua">&nbsp; &nbsp; recycle distillation column outlets</p><p style="color: peachpuff">&nbsp; &nbsp; reactor effluent</p>
+              </p>
+            </h1>
+          </div>
+        </div>
+        <div class="carousel-slide" id="hazopstudy">
+          <a href="cameo_chemical_summary.png"><img src="cameo_chemical_summary.png"></a>
+          <div class="caption">
+            <h1>
+              Chemical Hazard Studies
+              <p>
+                Chemicals present in conventional and green methanol pathways were assessed using CAMEO Chemicals data and Safety Data Sheet (SDS) information. Significant health, flammability, and stability hazards are listed in the left-hand table, which also indicates key chemical thresholds, while the right-hand figure displays chemical reactivity hazard data from CAMEO Chemicals. 
+                <br>
+                <br>
+                Tables detailing stream-wise chemical hazards for each process -- including threshold met -- are <a href="hazard_table.pdf">detailed here</a>.
+                <br>
+                <br>
+                An additional assessment on material compatibility with process chemicals was performed to guide piping and equipment material selection, following <a href="https://dl.gasplus.ir/standard-ha/standard-API/%40Standardsharing%20API%20571%202020.pdf">ANSI/API guidelines</a>. Assessment results are detailed in <a href="https://docs.google.com/document/d/1rIRLYpAgOqmGMztQD-du2fYtxwiiVIvsPGEN0PHrtaY/edit?tab=t.m6ei6av7mvbu">our final project report<i>(work in progress)</i></a>.
+                <br>
+                <br>
+                <a href="Report _ CAMEO Chemicals _ NOAA.pdf">(CAMEO Chemicals and SDS data report)</a> 
+              </p>
+            </h1>
+          </div>
+        </div>
+        <div class="carousel-slide" id="prv">
+          <a href="pressure_relief.png"><img src="pressure_relief.png"></a>
+          <div class="caption">
+            <h1>
+              Reactor Pressure Relief System
+              <p>
+                Based on the chemical hazards assessment, a <a href="HazOp.pdf">Hazards and Operability (HazOp) assessment</a> was conducted for the reactor system, resulting in the implementation of a pressure relief system for both pathways.
+                <br>
+                <br>
+                Pressure relief system was implemented to mitigate risks from gas leaks, pipe blockages, flow or pressure fluctuations, and elevated pressure or temperature in the reactor vessel.
               </p>
             </h1>
           </div>
@@ -241,74 +322,8 @@
             </h1>
           </div>
         </div>
-        <div class="carousel-slide" id="hazopstudy">
-          <a href="cameo_chemical_summary.png"><img src="cameo_chemical_summary.png"></a>
-          <div class="caption">
-            <h1>
-              Chemical Hazard Studies
-              <p>
-                Chemicals present in conventional and green methanol pathways were assessed using CAMEO Chemicals data and Safety Data Sheet (SDS) information. Significant health, flammability, and stability hazards are listed in the left-hand table, which also indicates key chemical thresholds, while the right-hand figure displays chemical reactivity hazard data from CAMEO Chemicals. 
-                <br>
-                <br>
-                Tables detailing stream-wise chemical hazards for each process -- including threshold met -- are <a href="hazard_table.pdf">detailed here</a>.
-                <br>
-                <br>
-                An additional assessment on material compatibility with process chemicals was performed to guide piping and equipment material selection, following <a href="https://dl.gasplus.ir/standard-ha/standard-API/%40Standardsharing%20API%20571%202020.pdf">ANSI/API guidelines</a>. Assessment results are detailed in <a href="https://docs.google.com/document/d/1rIRLYpAgOqmGMztQD-du2fYtxwiiVIvsPGEN0PHrtaY/edit?tab=t.m6ei6av7mvbu">our final project report<i>(work in progress)</i></a>.
-                <br>
-                <br>
-                <a href="Report _ CAMEO Chemicals _ NOAA.pdf">(CAMEO Chemicals and SDS data report)</a> 
-              </p>
-            </h1>
-          </div>
-        </div>
-        <div class="carousel-slide">
-          <a href="pressure_relief.png"><img src="pressure_relief.png"></a>
-          <div class="caption">
-            <h1>
-              Reactor Pressure Relief System
-              <p>
-                Based on the chemical hazards assessment, a <a href="HazOp.pdf">Hazards and Operability (HazOp) assessment</a> was conducted for the reactor system, resulting in the implementation of a pressure relief system for both pathways.
-                <br>
-                <br>
-                Pressure relief system was implemented to mitigate risks from gas leaks, pipe blockages, flow or pressure fluctuations, and elevated pressure or temperature in the reactor vessel.
-              </p>
-            </h1>
-          </div>
-        </div>
-        <div class="carousel-slide">
-          <a href="capex_cost.png"><img src="capex_cost.png"></a>
-          <div class="caption">
-            <h1>
-              Economic Feasibility Analysis <i>(Work In Progress)</i>
-              <p>
-                Utility, capital, raw materials, labor, and sales costs were determined to evaluate methanol pricing for each pathway.  
-                <br>
-                <br>
-                Pathway 1 (SMR-based) showed significantly lower production costs, at $114.29 per kg, compared to $309,095 per kg for Pathway 2 (biogas and electrolysis). Total capital and operating costs for Pathway 1 were $675,286 and $240,000, respectively, while Pathway 2 incurred $1,337,442 in capital costs and $300,000 in operating costs, driven largely by intensive utility demands and sophisticated separation systems. 
-                <br>
-                <br>
-                Despite its high cost, Pathway 2 aligns better with sustainability goals by reducing carbon emissions and avoiding byproduct formation, but will require further optimization to be economically viable.
-                <br>
-                <br>
-                Cost and sizing calculations, as well as, detailed economic analysis of each pathway is <a href="https://docs.google.com/document/d/1rIRLYpAgOqmGMztQD-du2fYtxwiiVIvsPGEN0PHrtaY/edit?tab=t.m6ei6av7mvbu">discussed in our final project report (work in progress)</a>.
-              </p>
-            </h1>
-          </div>
-        </div>
-        <div class="carousel-slide">
-          <a href="https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2021/Jan/IRENA_Innovation_Renewable_Methanol_2021.pdf"><img src="IRENA_market_research.png"></a>
-          <div class="caption">
-            <h1>
-              International Green Methanol Market & Production Forecast
-              <p>
-                IRENA (International Renewable Energy Agency) forecasts the global green methanol market to grow significantly by 2050, with production projected to reach 500 Mt, including 250 Mt from e-methanol and 135 Mt from bio-methanol. This growth will be driven by demand in transportation, shipping, and chemical production from implementation of sustainable legislature driving the transition from fossil fuels to renewable fuel standards -- such as the <a href="https://www.europarl.europa.eu/committees/en/renewable-energy-directive-red-ii-/product-details/20220214CDT09123">EU's REDII</a>, <a href="https://www.c2es.org/document/us-state-carbon-pricing-policies/">carbon pricing policies</a>, and <a href="https://www.imo.org/en/OurWork/Environment/Pages/2023-IMO-Strategy-on-Reduction-of-GHG-Emissions-from-Ships.aspx">International Maritime's net-zero emission, GHG strategy</a>. 
-                <br>
-                <br>
-                <a href="https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2021/Jan/IRENA_Innovation_Renewable_Methanol_2021.pdf">(img src)</a>  
-              </p>
-            </h1>
-          </div>
-        </div>
+        
+        
       
         <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
         <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
